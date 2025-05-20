@@ -1,0 +1,28 @@
+\documentclass[a4paper, 12pt]{report}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}  % Optional, für mathematische Formeln
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{graphicx}
+
+\usepackage[backend=bibtex,style=alphabetic]{biblatex}
+\addbibresource{bibliography.bib}
+
+
+\begin{document}
+
+\title{Ein Beispiel Dokument} % Title
+\author{Fiete Scheel} % Author
+\date{\today} % Date
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+\chapter{Basic Elemente}
+\input{chapters/example_chapter.tex}
+
+
+\printbibliography
+
+\end{document}
