@@ -24,6 +24,8 @@ git clone https://github.com/mcfiet/latex-example.git
   - `texlive-lang`
   - `texlive-bibtexextra`
   - `texlive-xcolor`
+  - `texlive-latexextra`
+  - `biber`
 
 Falls du `pacman` verwendest, kannst du diese Pakete mit folgendem Befehl installieren:
 
