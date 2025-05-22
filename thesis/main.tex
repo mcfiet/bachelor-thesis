@@ -1,28 +1,72 @@
 \documentclass[a4paper, 12pt]{report}
 \usepackage[ngerman]{babel}
 \usepackage{amsmath}  % Optional, für mathematische Formeln
+\usepackage{listings}
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{graphicx}
+\usepackage[T1]{fontenc}        % Korrekte Zeichenkodierung
+\usepackage{lmodern}            % Bessere Schriftqualität
+\usepackage[margin=3cm]{geometry} % Ränder einstellen
+\usepackage{setspace}           % Zeilenabstand
+\usepackage{amsmath, amssymb}   % Mathematische Symbole
+\usepackage{csquotes}           % Korrekte Zitierung mit biblatex
+\usepackage[backend=biber, style=alphabetic]{biblatex} % Besseres Literaturverzeichnis
+\usepackage{booktabs}           % Schönere Tabellen
+\usepackage{fancyhdr}           % Kopf- und Fußzeilen
+\usepackage[colorlinks=true]{hyperref} % Verlinkung in PDF
 
-\usepackage[backend=bibtex,style=alphabetic]{biblatex}
+% JavaScript-Syntax-Highlighting
+\lstdefinelanguage{JavaScript}{
+  keywords={break, case, catch, class, const, continue, debugger, default, delete, do, else, export, extends, finally, for, function, if, import, in, instanceof, let, new, return, super, switch, this, throw, try, typeof, var, void, while, with},
+  sensitive=true,
+  comment=[l]{//},                     % Einzelzeilenkommentare
+  comment=[s]{/*}{*/},                 % Mehrzeilige Kommentare
+  string=[b]"{}",                      % String in doppelten Anführungszeichen
+  morekeywords={async, await},         % Weitere Schlüsselwörter
+}
+
+\lstset{
+    language=JavaScript,                  % Verwende die benutzerdefinierte JavaScript-Syntax
+    backgroundcolor=\color{black!5},       % Hintergrundfarbe des Codes
+    basicstyle=\ttfamily\small,            % Schriftart und -größe
+    breaklines=true,                       % Zeilenumbruch bei zu langen Zeilen
+    numbers=left,                          % Zeilennummern auf der linken Seite
+    numberstyle=\tiny\color{gray},         % Stil der Zeilennummern
+    commentstyle=\color{green}\ttfamily,    % Kommentare in grün
+    keywordstyle=\color{blue}\bfseries,    % Schlüsselwörter in blau und fett
+    stringstyle=\color{red},               % Strings in rot
+    frame=single,                          % Rahmen um den Code
+    rulecolor=\color{gray},                % Farbe des Rahmens
+    breakatwhitespace=true,                % Umbrüche auch bei Leerzeichen
+    tabsize=2,                             % Tabulatorgröße
+    showspaces=false,                      % Keine Leerzeichensymbole
+    showstringspaces=false,                % Keine Leerzeichensymbole in Strings
+    morekeywords={async, await}            % Weitere Keywords für ES6 und neuer
+}
 \addbibresource{bibliography.bib}
-
-
 \begin{document}
 
-\title{Ein Beispiel Dokument} % Title
+\title{\textit{Barrierefreiheit: Vom Gesetz zum Code} \\ 
+       \textbf{Welche Auswirkungen hat das BFSG auf moderne Webanwendungen?} \\[1em]
+       {Bachelor-Thesis}}
+
 \author{Fiete Scheel} % Author
 \date{\today} % Date
 
 \maketitle
 
-\tableofcontents
 \newpage
+\tableofcontents
 
-\chapter{Basic Elemente}
-\input{chapters/example_chapter.tex}
+\newpage
+\chapter{Einleitung}
+\input{chapters/einfuehrung.tex}
 
+\chapter{Grundlagen}
+\input{chapters/grundlagen.tex}
 
-\printbibliography
+%\chapter{Basic Elemente}
+%\input{chapters/example_chapter.tex}
 
+\printbibliography  % Hier die Bibliografie ausgeben
 \end{document}
