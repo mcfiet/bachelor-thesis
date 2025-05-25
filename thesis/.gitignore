@@ -13,6 +13,9 @@
 *.nav
 *.snm
 
+#Ausgabe
+.pdf
+
 # Editor-spezifische Dateien
 *~           # temporäre Dateien
 *.swp        # vim swap files
