@@ -1,0 +1,29 @@
+
+% JavaScript-Syntax-Highlighting
+\lstdefinelanguage{JavaScript}{
+  keywords={break, case, catch, class, const, continue, debugger, default, delete, do, else, export, extends, finally, for, function, if, import, in, instanceof, let, new, return, super, switch, this, throw, try, typeof, var, void, while, with},
+  sensitive=true,
+  comment=[l]{//},                     % Einzelzeilenkommentare
+  comment=[s]{/*}{*/},                 % Mehrzeilige Kommentare
+  string=[b]"{}",                      % String in doppelten Anführungszeichen
+  morekeywords={async, await},         % Weitere Schlüsselwörter
+}
+
+\lstset{
+    language=JavaScript,                  % Verwende die benutzerdefinierte JavaScript-Syntax
+    backgroundcolor=\color{black!5},       % Hintergrundfarbe des Codes
+    basicstyle=\ttfamily\small,            % Schriftart und -größe
+    breaklines=true,                       % Zeilenumbruch bei zu langen Zeilen
+    numbers=left,                          % Zeilennummern auf der linken Seite
+    numberstyle=\tiny\color{gray},         % Stil der Zeilennummern
+    commentstyle=\color{green}\ttfamily,    % Kommentare in grün
+    keywordstyle=\color{blue}\bfseries,    % Schlüsselwörter in blau und fett
+    stringstyle=\color{red},               % Strings in rot
+    frame=single,                          % Rahmen um den Code
+    rulecolor=\color{gray},                % Farbe des Rahmens
+    breakatwhitespace=true,                % Umbrüche auch bei Leerzeichen
+    tabsize=2,                             % Tabulatorgröße
+    showspaces=false,                      % Keine Leerzeichensymbole
+    showstringspaces=false,                % Keine Leerzeichensymbole in Strings
+    morekeywords={async, await}            % Weitere Keywords für ES6 und neuer
+}

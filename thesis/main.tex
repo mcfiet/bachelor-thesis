@@ -1,51 +1,13 @@
-\documentclass[a4paper, 12pt]{scrreprt}
-\usepackage[ngerman]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath}  % Optional, für mathematische Formeln
-\usepackage{listings}
-\usepackage[table,xcdraw]{xcolor}
-\usepackage{graphicx}
-\usepackage[T1]{fontenc}        % Korrekte Zeichenkodierung
-\usepackage{lmodern}            % Bessere Schriftqualität
-\usepackage[margin=3cm]{geometry} % Ränder einstellen
-\usepackage{setspace}           % Zeilenabstand
-\usepackage{amsmath, amssymb}   % Mathematische Symbole
-\usepackage{csquotes}           % Korrekte Zitierung mit biblatex
-\usepackage[numbers]{natbib}           % Für Zitationen
-\bibliographystyle{abbrvnat}   % Bibliographiestil
-\setcitestyle{authoryear,open={(},close={)}}  % Stil (Autor, Jahr) Zitierstil (Klammern)
+\documentclass[a4paper, english, 12pt]{scrreprt}
+\input{options/packages.tex}
 
-\usepackage{booktabs}           % Schönere Tabellen
-\usepackage[colorlinks=true]{hyperref} % Verlinkung in PDF
-% JavaScript-Syntax-Highlighting
-\lstdefinelanguage{JavaScript}{
-  keywords={break, case, catch, class, const, continue, debugger, default, delete, do, else, export, extends, finally, for, function, if, import, in, instanceof, let, new, return, super, switch, this, throw, try, typeof, var, void, while, with},
-  sensitive=true,
-  comment=[l]{//},                     % Einzelzeilenkommentare
-  comment=[s]{/*}{*/},                 % Mehrzeilige Kommentare
-  string=[b]"{}",                      % String in doppelten Anführungszeichen
-  morekeywords={async, await},         % Weitere Schlüsselwörter
-}
+\DeclareDelimFormat{nameyeardelim}{\addcomma\space}
+\providecommand{\apashortdash}{-}
 
-\lstset{
-    language=JavaScript,                  % Verwende die benutzerdefinierte JavaScript-Syntax
-    backgroundcolor=\color{black!5},       % Hintergrundfarbe des Codes
-    basicstyle=\ttfamily\small,            % Schriftart und -größe
-    breaklines=true,                       % Zeilenumbruch bei zu langen Zeilen
-    numbers=left,                          % Zeilennummern auf der linken Seite
-    numberstyle=\tiny\color{gray},         % Stil der Zeilennummern
-    commentstyle=\color{green}\ttfamily,    % Kommentare in grün
-    keywordstyle=\color{blue}\bfseries,    % Schlüsselwörter in blau und fett
-    stringstyle=\color{red},               % Strings in rot
-    frame=single,                          % Rahmen um den Code
-    rulecolor=\color{gray},                % Farbe des Rahmens
-    breakatwhitespace=true,                % Umbrüche auch bei Leerzeichen
-    tabsize=2,                             % Tabulatorgröße
-    showspaces=false,                      % Keine Leerzeichensymbole
-    showstringspaces=false,                % Keine Leerzeichensymbole in Strings
-    morekeywords={async, await}            % Weitere Keywords für ES6 und neuer
-}
+\input{options/code.tex}
 
+\addbibresource{bibliography.bib} % Literaturdatei hier angeben
+\DefineBibliographyStrings{ngerman}{bibliography = {Bibliographie}, nodate = {{o. D.}}, retrieved = {Abgerufen am}}
 \begin{document}
 
 \title{\textit{Barrierefreiheit: Vom Gesetz zum Code} \\ 
@@ -62,12 +24,15 @@
 
 \newpage
 \chapter{Einleitung}
-\input{chapters/einfuehrung.tex}
+\input{chapters/00_einfuehrung.tex}
+
+\chapter{Grundlagen}
+\input{chapters/01_grundlagen.tex}
 
 %\chapter{Basic Elemente}
 %\input{chapters/example_chapter.tex}
 
 % Bibliographie einfügen
-\bibliography{bibliography.bib} % Literaturdatei hier angeben
+\printbibliography
 
 \end{document}
