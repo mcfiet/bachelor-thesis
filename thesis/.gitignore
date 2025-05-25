@@ -13,8 +13,11 @@
 *.nav
 *.snm
 
-#Ausgabe
+# Ausgabe
 *.pdf
+
+# Temporäre Dateien
+.temp
 
 # Editor-spezifische Dateien
 *~           # temporäre Dateien
