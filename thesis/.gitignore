@@ -14,7 +14,7 @@
 *.snm
 
 #Ausgabe
-.pdf
+*.pdf
 
 # Editor-spezifische Dateien
 *~           # temporäre Dateien
