@@ -1,5 +1,6 @@
-\documentclass[a4paper, 12pt]{report}
+\documentclass[a4paper, 12pt]{scrreprt}
 \usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
 \usepackage{amsmath}  % Optional, für mathematische Formeln
 \usepackage{listings}
 \usepackage[table,xcdraw]{xcolor}
@@ -10,11 +11,12 @@
 \usepackage{setspace}           % Zeilenabstand
 \usepackage{amsmath, amssymb}   % Mathematische Symbole
 \usepackage{csquotes}           % Korrekte Zitierung mit biblatex
-\usepackage[backend=biber, style=alphabetic]{biblatex} % Besseres Literaturverzeichnis
-\usepackage{booktabs}           % Schönere Tabellen
-\usepackage{fancyhdr}           % Kopf- und Fußzeilen
-\usepackage[colorlinks=true]{hyperref} % Verlinkung in PDF
+\usepackage[numbers]{natbib}           % Für Zitationen
+\bibliographystyle{abbrvnat}   % Bibliographiestil
+\setcitestyle{authoryear,open={(},close={)}}  % Stil (Autor, Jahr) Zitierstil (Klammern)
 
+\usepackage{booktabs}           % Schönere Tabellen
+\usepackage[colorlinks=true]{hyperref} % Verlinkung in PDF
 % JavaScript-Syntax-Highlighting
 \lstdefinelanguage{JavaScript}{
   keywords={break, case, catch, class, const, continue, debugger, default, delete, do, else, export, extends, finally, for, function, if, import, in, instanceof, let, new, return, super, switch, this, throw, try, typeof, var, void, while, with},
@@ -43,7 +45,7 @@
     showstringspaces=false,                % Keine Leerzeichensymbole in Strings
     morekeywords={async, await}            % Weitere Keywords für ES6 und neuer
 }
-\addbibresource{bibliography.bib}
+
 \begin{document}
 
 \title{\textit{Barrierefreiheit: Vom Gesetz zum Code} \\ 
@@ -62,11 +64,10 @@
 \chapter{Einleitung}
 \input{chapters/einfuehrung.tex}
 
-\chapter{Grundlagen}
-\input{chapters/grundlagen.tex}
-
 %\chapter{Basic Elemente}
 %\input{chapters/example_chapter.tex}
 
-\printbibliography  % Hier die Bibliografie ausgeben
+% Bibliographie einfügen
+\bibliography{bibliography.bib} % Literaturdatei hier angeben
+
 \end{document}
