@@ -131,7 +131,47 @@ Außerdem basieren alle Punkte bis auf 9.1 - 9.4 und 9.6 auf dem WCAG 2.0, die h
 \subsection{WCAG 2.1}
 Die Web Content Accessibility Guidelines (WCAG) 2 wurden im Rahmen des W3C-Prozesses in Zusammenarbeit mit Einzelpersonen und Organisationen aus der ganzen Welt entwickelt. Ziel war es, einen einheitlichen Standard für die Zugänglichkeit von Web-Inhalten zu schaffen, der den Bedürfnissen von Einzelpersonen, Organisationen und Regierungen auf internationaler Ebene gerecht wird.
 
-Die WCAG-Dokumente bieten eine Anleitung, wie Web-Inhalte gestaltet werden können, damit sie für Menschen mit Behinderungen besser zugänglich sind. Unter Web-Inhalten versteht man im Allgemeinen Informationen, die auf einer Webseite oder in einer Web-Anwendung zur Verfügung gestellt werden. \parencite{w3c_wcag_2024}
+Die WCAG-Dokumente bieten eine Anleitung, wie Web-Inhalte gestaltet werden können, damit sie für Menschen mit Behinderungen besser zugänglich sind. Unter Web-Inhalten versteht man im Allgemeinen Informationen, die auf einer Webseite oder in einer Web-Anwendung zur Verfügung gestellt werden \parencite{w3c_wcag_2024}.
 
+\section{Technische Grundlagen \& Webentwicklung}
 
+\subsection{Web 2.0 \& modernen Webanwendungen}
 
+\subsection{Document Object Model (DOM)}
+Das Document Object Model verbindet Webseiten mit Skripten oder Programmiersprachen. Es verbindet, ähnlich wie HTML mit Webseiten, die Struktur eines Dokuments im Speicher. 
+
+Es stellt einen logischen Strukturbaum dar, in dem jeder Zweig des Baums in einem Knoten endet, der wiederum Objekte enthält. Das DOM erlaubt den programmatischen Zugriff auf den Strukturbaum. Dies ermöglicht die Manipulation der Dokumentenstruktur, des Layouts oder des Inhalts.
+
+Nodes können dabei auch mit Event Handlern versehen werden und sobald ein Event getriggert wurde, wird dieser Event-Handler ausgeführt \parencite[vgl.][]{mdn_dom_nodate}.
+
+\subsection{Accessible Rich Internet Applications (ARIA)}
+ARIA ist eine Sammlung von Rollen und Attributen, um Webinhalte und Webanwendungen (insbesondere solche, die mit Javascript entwickelt wurden) für Menschen mit Behinderungen zugänglicher zu machen.
+
+Es kann als eine Art Erweiterung von HTML betrachtet werden, um Interaktionen, die häufig in Anwendungen verwendet werden, für die es aber keinen Mechanismus gibt, den unterstützten Technologien mitzuteilen \parencite[vgl.][]{mdn_aria_nodate}.
+
+Es ist wichtig, ARIA als eine Erweiterung von HTML zu betrachten, da alle nativen HTML-Elemente und Attribute ausgeschöpft werden sollten, bevor ARIA verwendet wird. Es sollte vermieden werden, ein natives HTML-Element zu imitieren. Dies ist die erste Regel für die Verwendung von ARIA \parencite[vgl.][]{w3c_ariause_nodate}.
+
+\textcolor{red}{Beispiele?}
+
+\subsection{Semantic HTML}
+Ein wichtiger Bestandteil der Barrierefreiheit im Web ist die semantische Struktur eines HTML-Dokuments. Semantik in der Webentwicklung bedeutet, dass ein Element für Browser und Entwickler gleichermaßen gut beschrieben ist. Vor allem der Browser muss die Elemente richtig interpretieren, um eine sinnvolle Struktur auszugeben \parencite[vgl.][]{mdn_semanticshtml_nodate}. 
+
+HTML definiert die Struktur von Web-Inhalten. Es verwendet Markup, um Inhalte für die Darstellung in einem Webbrowser zu kennzeichnen \parencite[vgl.][]{mdn_html_nodate}. Daher ist es wichtig, das richtige Markup für den jeweiligen Inhalt zu verwenden.
+
+So gibt es zum Beispiel das Markup "Section", das, wie der Name schon sagt, einen Abschnitt beschreibt. Anstelle von "Section" kann auch einfach ein "div" verwendet werden, welches einen einfachen Container darstellt, aber keinen semantischen Wert hat.
+
+\subsection{Javascript}
+JavaScript ist eine Programmiersprache, die hauptsächlich als Skriptsprache für Websites verwendet wird. Allerdings findet sie auch in vielen nicht-browserbasierten Umgebungen Verwendung. Dann ist wird sie häufig zusammen mit Node.js auf Servern verwendet. 
+
+Ohne Javascript war es bisher nur möglich statischen Inhalt auf Websites abzubilden. Javascript wurde 1995 von Brendon Eich für Netscape 2, ein Webbrowser für Netscape Communications, entwickelt und Netscape 2 mit Javascript 1,0 1996 veröffentlicht. 1997 wurde es dann zum ECMA-Standard wurde und von ECMA weiterentwickelt. ECMA gehört zu Mozilla. Durch die Standardisierung wurde Javascript in immer mehr Browsern implementiert. Der Internet Explorer war einer der ersten \parencite[vgl.][]{w3c_javascript_nodate}.
+
+Javascript ist eine just-in-time kompilierte Programmiersprache, bei der erst während der Laufzeit der Programmcode in ausführbaren, plattformunabhängigen Maschinencode übersetzt wird. Die Sprache ist dadurch auch sehr dynamisch. So werden beipielsweise Variablen, Funktionen, Objekte und Typisierung dynamisch erstellt. Das hat Vorteile aber auch Nachteile. So kann eine Variable mit einem numerischen Datentyp initialisiert werden, aber sich im Laufe des Programmcodes auch zu einem String ändern \parencite[vgl.][]{mdn_javascript_nodate}.
+
+\textcolor{red}{Beispiele?}
+
+\subsection{Typescript}
+Das letzte Beispiel beschreibt das größte Problem von JavaScript ziemlich gut. Die dynamische Typisierung kann sehr fehleranfällig sein, da Typisierungsprobleme schnell übersehen werden. In anderen Programmiersprachen werden solche Fehler direkt angezeigt oder das Programm gar nicht erst kompiliert.
+
+\textcolor{red}{Beispiele?}
+
+Durch Typescript wird dieser wichtige Teil zu Javascript hinzugefügt. Dabei ist es so, dass Typescript eine Obermenge von JavaScript ist und somit jeder JavaScript-Code auch mit Typescript funktioniert. \parencite[vgl.][]{ts_typescript_nodate}
