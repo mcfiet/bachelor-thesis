@@ -8,7 +8,7 @@ Das Thema hat mich von Anfang an interessiert, da es mir Spaß gemacht hat, Mög
 
 Als ich mich dann neben dem Studium mit der Entwicklung von Webanwendungen selbstständig machte, blieb das Thema ein weiterer Bestandteil meiner Arbeit. Die Projekte, die ich für meine Kunden entwickelte, sollten weiterhin möglichst vielen Menschen zugänglich gemacht werden. Teilweise wurde dies sogar von den Kunden gefordert, was die Sache natürlich noch wichtiger machte. Schon damals war ich stolz darauf, dass meine Anwendungen barrierefrei waren und diverse Tests auf Barrierefreiheit bestanden hatten.
 
-\section{Motivation} 
+\section{Motivation \& Problemstellung} 
 \label{sec:motivation}
 Dabei habe ich aber nur meine Grundkenntnisse angewandt und gehofft, dass das ausreicht. Im Großen und Ganzen hat es für den Anfang auch gereicht. Es gab aber nie genaue Vorgaben, eher nur Richtlinien, an die man sich aber nicht halten musste. 
 
@@ -25,3 +25,50 @@ Zusammengefasst unter der Thesis Frage:
 
 \noindent\textbf{\large Wie lassen sich die Anforderungen des Barrierefreiheitsstärkungsgesetzes (BFSG) in einer modernen Webanwendung technisch umsetzen?}
 \vspace{1em}
+
+\section{Mrija Manager}
+Mein Praktikum während des Studiums habe ich bei der Progeek GmbH absolviert. Das Unternehmen wurde unter anderem von Boris Dudelsack gegründet, der in einigen Modulen auch mein Dozent war. So kam der Kontakt zustande. Als ich auf der Suche nach einem Thema für meine Bachelorarbeit war, stand ich in engem Kontakt mit Boris Dudelsack. Zu einem späteren Zeitpunkt kam Boris dann mit einem Projekt auf mich zu, das die Progeek GmbH demnächst starten wird und für das ein Usability- und Accessibility-Konzept benötigt wird.
+
+Das Projekt heißt Mrija Manager und hat zum Ziel, eine benutzerfreundliche und barrierefreie Plattform für die Verwaltung von Veranstaltungen zu entwickeln. Der Mrija Manager ermöglicht es Veranstaltern, ihre Events auf einfache Weise zu präsentieren und den Austausch mit Nutzern zu fördern. Die plattformübergreifende Webanwendung ist auf allen Geräten nutzbar und bietet eine flexible Gestaltung von Veranstaltungen. Vereine können ihre Veranstaltungen als privat, offen, kostenpflichtig oder kostenlos anlegen, um gezielt ein interessiertes Publikum anzusprechen.
+
+Die Plattform richtet sich an Veranstalter und Interessierte jeder Herkunft und erleichtert die Verwaltung von Anmeldungen und Kontakten. Durch Open Source und Hosting in Deutschland wird ein hohes Maß an Sicherheit und Transparenz gewährleistet.
+
+Besonderer Wert wird auch auf die Barrierefreiheit gelegt, so dass es sich angeboten hat, mit meiner Arbeit an dem Konzept mitzuwirken.
+
+\section{Forschungsmethodik und Aufbau der Arbeit}
+
+In dieser Arbeit wird ein systematischer Ansatz verwendet, um eine barrierefreie Anwendung mit React zu entwickeln und zu evaluieren. Die Forschungsstrategie kombiniert theoretische und praktische Ansätze, wobei sowohl eine Literaturrecherche als auch eine Fallstudie sowie Prototyping und Evaluation durchgeführt werden. Der folgende Abschnitt gibt einen kurzen Überblick über die einzelnen Forschungsmethoden und ihre Anwendung in dieser Arbeit.
+
+\subsection{Literaturrecherche} 
+
+Die Grundlage dieser Arbeit bildet eine umfassende Literaturrecherche. Ziel ist es, relevante wissenschaftliche Artikel, technische Dokumentationen und gesetzliche Vorgaben zur digitalen Barrierefreiheit zu analysieren. Dabei werden insbesondere die nationalen Vorgaben aus den Gesetzen BITV 2.0 und BFSG, die den Gesetzen zugrundeliegenden EU-Richtlinien 2016/2102 und 2019/882 sowie die in der Norm EN 301 549 enthaltenen Web Content Accessibility Guidelines (WCAG 2.1) betrachtet.
+
+Die Recherche erfolgt mittels wissenschaftlicher Datenbanken wie Google Scholar, \textcolor{red}{(IEEE Xplore und ACM Digital Library)} sowie durch die Analyse relevanter Web- und Entwicklerdokumentationen. Der Fokus liegt dabei auf den methodischen Grundlagen der Web Accessibility, den technischen Anforderungen und Best Practices für barrierefreie Webanwendungen.
+
+\subsection{Fallstudie}
+
+Im Rahmen der Fallstudie werden bestehende Webanwendungen analysiert, um aktuelle Herausforderungen und Defizite in Bezug auf Barrierefreiheit zu identifizieren. Dabei werden verschiedene Websites aus den Bereichen E-Government, E-Commerce, Finanzdienstleistungen und Mobilitätsdienste betrachtet.
+
+Die Analyse erfolgt nach einem festgelegten Kriterienkatalog, der sich an den Anforderungen der WCAG 2.1 sowie an gesetzlichen Vorgaben orientiert. Neben automatisierten Tests mit Tools wie Lighthouse und axe werden auch manuelle Tests durchgeführt, um beispielsweise die Tastaturbedienbarkeit und die Screenreader-Kompatibilität zu bewerten. Die Ergebnisse der Fallstudie fließen direkt in die Entwicklung des Prototyps ein.
+
+\subsection{Prototyping} 
+
+Auf Basis der gewonnenen Erkenntnisse wird ein barrierefreier Prototyp einer React-Anwendung entwickelt. Der Fokus liegt dabei auf der Umsetzung der wesentlichen Anforderungen für digitale Barrierefreiheit, u.a:
+
+Verwendung von ARIA-Attributen zur Verbesserung der Unterstützung von assistiven Technologien, Strukturierung der Inhalte mit semantischem HTML, Sicherstellung einer uneingeschränkten Tastaturbedienbarkeit, Optimierung von Farbkontrasten und visuellen Elementen.
+
+Die Entwicklung erfolgt iterativ unter Berücksichtigung der gesetzlichen Vorgaben, der WCAG und der Best Practices für Barrierefreiheit. Das verwendete UI-Framework MUI wird gezielt auf Barrierefreiheit getestet und angepasst.
+
+\subsection{Evaluierung}
+
+Die Evaluierung des entwickelten Prototyps erfolgt anhand definierter Testmethoden. Dabei werden sowohl automatisierte Tests als auch manuelle Überprüfungen durchgeführt:
+
+- Automatisierte Tests: Einsatz von Lighthouse, axe DevTools und WAVE zur Identifikation von Barrieren.
+
+- Manuelle Tests: Überprüfung der Tastaturnavigation, Screenreader-Unterstützung und Kontrastverhältnisse.
+
+- Vergleich mit rechtlichen Anforderungen: Überprüfung, ob die Anwendung den Richtlinien der WCAG 2.1 und EN 301 549 entspricht.
+
+Die Evaluation liefert Erkenntnisse darüber, inwieweit die gesetzlich geforderten Barrierefreiheitsstandards mit React und MUI umgesetzt werden können und wo Optimierungspotenzial besteht. Diese Ergebnisse fließen in die abschließende Diskussion der Arbeit ein.
+
+Durch die Kombination dieser Forschungsmethoden wird eine fundierte Grundlage geschaffen, um eine praxisnahe, barrierefreie React-Anwendung zu entwickeln und deren Wirksamkeit im Hinblick auf digitale Inklusion zu evaluieren.
