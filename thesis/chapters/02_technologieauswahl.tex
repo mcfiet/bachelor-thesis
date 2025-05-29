@@ -1,0 +1,34 @@
+\section{React als Framework}
+React zusammen mit dem Begriff Framework zu nennen ist an sich schon einmal falsch. React ist eine Bibliothek, die es zunächst einmal erlaubt Komponenten zu erstellen. Das heißt man kann Teile seiner Website unterteilen, sodass der Code weniger redundand wird. 
+
+Die Komponenten basieren auf Javascript-Funktionen. Dies hat den Vorteil, dass man seine gerenderten Komponenten mit Logik verknüpfen kann. Dies ist mit reinem HTML und CSS nur eingeschränkt möglich. Für die Logik verwendet man dann eben Javascript, allerdings ist es deutlich mühsamer mit HTML, CSS und Javascript getrennt zu arbeiten. Mit React hat man die Möglichkeit alles an einem Ort zu haben. Die Logik und die gerenderten Komponenten gehen Hand in Hand.
+
+Durch die JSX-Erweiterung von React, ist es möglich HTML-ähnlichen Code direkt in Javscript zu schreiben. Somit wird das Verständnis zu Erstellung von Komponenten erleichtert, da man zum großen Teil mit Code arbeitet, den man normalerweise aus den Web-Grundlagen kennt.
+
+Ein weiterer Vorteil von diesem Frontend-Framework ist die Interaktivität. Dadurch, dass der Code im Browser mit Javascript ausgeführt wird, kann durch die schon erwähnten Eventlistener direkt auf User-Interaktionen reagieren. Das ist mit statisch auf dem Server gerenderten Seiten so nicht möglich \parencite[vgl.][]{meta_react_nodate}.
+
+\subsection{Warum React?}
+React ist eines der beliebtesten Web Technologien der letzten Jahre. Laut einer Umfrage von Stackoverflow im Jahr 2024 ist React mit Abstand nach Node.js das beliebteste Frontend-Framework. Auf die Frage \textit{Mit welchen Web-Frameworks und Web-Technologien haben Sie im letzten Jahr umfangreiche Entwicklungsarbeit geleistet, und mit welchen wollen Sie im nächsten Jahr arbeiten?} haben 39.5\% React ausgewählt \parencite[vgl.][]{stackoverflow_survey_2024}. Geht man nach den Trends der Tags im Froum von Stackoverflow, so ist React auch der klare Gewinner, trotz der Abnahme in den letzten Jahren \parencite[vgl.][]{stackoverflow_trends_2024}.
+
+Warum sind diese Statistiken von Stackoverflow wichtig? Stackoverflow ist eines der größten Foren in der Informatik. Bei Programmiersprachen, Bilbiotheken und Frameworks ist vor allem die Unterstützung sehr wichtig, um Probleme schnell lösen zu können. Daher ist sind die Statistiken von Stackoverflow ein guter Indikator, wie sehr eine Programmiersprache, Bibliothek oder Framework benutzt und unterstützt wird.
+
+Wenn wir also von einer modernen Webanwendung sprechen, müssen wir React als Technologie berücksichtigen, da es eine starke Präsenz in Entwicklerkreisen hat.
+
+\section{MUI als UI-Library}
+UI Libraries sind eine Sammlung von vorgefertigten und gestalteten UI-Komponenten. Dazu gehören Buttons, Tabellen, Dropdown usw. die man aber auch noch weiter anpassen kann. UI Libraries zielen darauf ab, Anwendungen schneller und erffizienter zu erstellen \parencite[vgl.][]{strapi_uilibraries_2024}.
+
+Einer der bekanntesten und am meisten bewertet auf Github ist da Material UI (MUI) \parencite[vgl.][]{smile_uilibraries_2024}. MUI bietet eine umfassende Bibliothek an React-Komponenten, die von einem Open-Source Team entwickelt wurden. Mit MUI wurde das Material Desgin System von Google umgesetzt. Allerdings bietet MUI auch die Möglichkeit sein eigenes Designsystem in die vorgefertigten Komponenten und Themes einzuarbeiten, das heißt man ist nicht an das Material Design von Google gebunden. Open-Source heißt nicht gleich kostenlos, daher gibt es auch bei MUI Komponenten und Features für die beyzahlt werden müssen.
+
+Da diese Bachelorthesis auch im Rahmen mit dem Usability-Konzept von Mrija-Manager entsteht und Progeek seine Anwendungen mit React und MUI umsetzt überschneiden sich die Statistiken und die Auswahl der Technologien hier. Das ist sehr hilfreich, da die Umsetzung der Anforderungen so nicht nur für das eine Projekt relevant sind, sondern für viele der modernen Webandwendungen.
+
+\section{Technologien und Tools zum Testen}
+Für die Analyse von Bestandsseiten und meiner Beispielanwendung sind gute Tools zum Testen sehr wichtig. Einmal bietet Aktion Mensch eine Übersicht von Tools und Materialien zum Thema digitale Barrierefreiheit \parencite[vgl.][]{aktionmensch_testingtools_nodate}. Aber auch die W3C bietet eine detaillierte Übersicht von Technologien für ganz verschiedene Bereiche um Barrierefreiheit zu testen \parencite[vgl.][]{w3c_testingtools_2024}.
+
+\subsection{axe Devtools}
+Für die Analyse der Websites wird unter anderem axe verwendet. Axe ist ein effizientes Tool zur Überprüfung der Zugänglichkeit von Websites und HTML-basierten Benutzeroberflächen. Sie zeichnet sich durch Schnelligkeit, Sicherheit und ein schlankes Design aus. Durch die nahtlose Integration in bestehende Testumgebungen ermöglicht Axe die Automatisierung von Zugänglichkeitstests parallel zu regulären Funktionstests. Laut Deque Systems lassen sich im Durchschnitt 57\% aller WCAG Fehler mit axe-core finden \parencite[vgl.][]{dequelabs_axedevtools_2025}. 
+
+\subsection{WAVE}
+Als Ergänzung zu Axe bietet WAVE® eine weitere effiziente Lösung zur Analyse der Zugänglichkeit von Webinhalten. Die WAVE-Toolsuite unterstützt Autoren dabei, ihre Websites für Menschen mit Behinderungen besser zugänglich zu machen. Sie erkennt nicht nur Verstöße gegen die Web Content Accessibility Guidelines (WCAG), sondern erleichtert auch die manuelle Bewertung von Webinhalten. Der Schwerpunkt liegt auf der Identifizierung relevanter Probleme, der Optimierung der menschlichen Überprüfung und der Sensibilisierung für digitale Barrierefreiheit \parencite[vgl.][]{webaim_wave_nodate}.
+
+\subsection{Screenreader NVDA}
+Diese beiden Tools dienen der automatischen Analyse der Websites. Um die Websites manuell auf Barrierefreiheit zu testen, wird der Screenreader NVDA verwendet. NVDA ist ein kostenloser Screenreader für Windows, der von der gemeinnützigen Organisation NV Access entwickelt wurde. NV Access ist eine eingetragene Wohltätigkeitsorganisation und ein Softwareentwicklungsunternehmen. NVDA (NonVisual Desktop Access) ist eine kostenlose Bildschirmleseanwendung, die blinden und sehbehinderten Benutzern Zugriff auf den Computer ermöglicht. NVDA liest den Text auf dem Bildschirm in einer Computerstimme vor. NVDA ist Open Source Software und wird kostenlos zur Verfügung gestellt \parencite[vgl.][]{nvaccess_nvda_nodate}.
