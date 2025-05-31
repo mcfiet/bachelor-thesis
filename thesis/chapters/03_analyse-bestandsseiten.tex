@@ -1,19 +1,30 @@
 \section{Ziel der Analyse}
 Um Aussagen über die Auswirkungen des BFSG auf die moderne Webentwicklung machen zu können, ist es notwendig, die aktuelle Situation zu analysieren. Dazu werden in diesem Kapitel verschiedene Webseiten auf ihre Barrierefreiheit hin untersucht. Die Analyse soll zeigen, wie weit verbreitet Barrierefreiheit in der Praxis ist und welche Probleme bei der Umsetzung auftreten können. Die Ergebnisse der Analyse sollen als Grundlage für die spätere Umsetzung dienen. 
 \section{Auswahl der zu analysierenden Seiten}
-Die Auswahl der zu analysierenden Seiten erfolgt auf Basis der Relevanz und der Verbreitung. Dabei werden sowohl öffentliche als auch private Webseiten betrachtet. Die Analyse umfasst folgende Kategorien:
-\begin{itemize}
-    \item \textbf{Öffentliche Verwaltungsportale:} Webseiten von Behörden und öffentlichen Institutionen, die Informationen und Dienstleistungen für Bürger bereitstellen.
-    \item \textbf{E-Commerce:} Online-Shops und Handelsplattformen, die Produkte und Dienstleistungen anbieten.
-    \item \textbf{Finanzdienstleistungen:} Webseiten von Banken, Versicherungen und anderen Finanzdienstleistern, die Informationen und Dienstleistungen im Finanzbereich anbieten.
-    \item \textbf{Mobilitätsdienste:} Webseiten von Verkehrsunternehmen und Mobilitätsanbietern, die Informationen und Dienstleistungen im Bereich Mobilität bereitstellen.
-    \item \textbf{Medienseiten und Nachrichtendienste:} Webseiten von Zeitungen, Zeitschriften und anderen Medienanbietern, die Informationen und Nachrichten bereitstellen.
-    \item \textbf{Veranstaltungsplattformen:} Webseiten, über die man Veranstaltungen buchen kann. Hier wird der Vergleich zum Mrija Manager gezogen.
-\end{itemize}
+Bei der Auswahl der relevanten Branchen von Websites wurden gezielt die Bereiche berücksichtigt, die eindeutig unter das BFSG fallen. Das BFSG schreibt vor, dass bestimmte Dienstleistungen barrierefrei angeboten werden müssen, insbesondere dann, wenn sie im so genannten „elektronischen Geschäftsverkehr“ erbracht werden. Folgende Branchen wurden aufgrund ihrer expliziten Nennung im Gesetz \parencite[vgl.][]{bmas_bfsg1_2021} und ihrer praktischen Relevanz ausgewählt.
+\begin{enumerate}
+    \item \textbf{Banken und Finanzdienstleistungen:} Gerade für die finanzielle Selbstbestimmung ist Barrierefreiheit in diesem Bereich besonders wichtig.
+
+    \item \textbf{Personenbeförderung (Luft-, Bus-, Schienen- und Schiffsverkehr):} Die Webseiten dieser Anbieter ermöglichen häufig Online-Buchungen, Ticketkauf oder Reiseinformationen und werden damit nicht nur im Gesetz explizit genannt, sondern sind damit klassische Beispiele für den „elektronischen Geschäftsverkehr“, der nach § 2 Nr. 26 BGG barrierefrei sein muss.
+
+    \item \textbf{Telekommunikationsdienste:} Die Websites von Telekommunikationsanbieter enthalten häufig Vertragsangebote, Tarifbuchungen und Serviceanfragen, die auf individuelle Verbraucheranfragen reagieren und damit unmittelbar unter die Definition des elektronischen Geschäftsverkehrs fallen.
+
+    \item \textbf{E-Commerce und Online-Shops:} Webseiten, die den Kauf oder die Buchung von Waren oder Dienstleistungen ermöglichen, sind klassische Vertreter des E-Commerce. Auch wenn das Gesetz teilweise Interpretationsspielraum lässt, gehört der Online-Handel eindeutig zu den Bereichen, für die eine barrierefreie Gestaltung notwendig ist. Dies betrifft nicht nur große Shops, sondern auch kleinere Websites mit Bestellfunktionen.
+
+    \item \textbf{Dienstleistungswebseiten mit Buchungs- oder Anfragefunktion:} Darüber hinaus wurden auch Webseiten berücksichtigt, auf denen konkrete Dienstleistungen online gebucht oder angefragt werden können, wie z.B. Friseursalons, Reisebüros oder Reiseveranstalter. Nach der Gesetzesbegründung und den Anwendungshinweisen erfüllen auch solche Webseiten die Kriterien für elektronische Dienstleistungen im Sinne des BFSG, wenn die Buchung oder Anfrage elektronisch erfolgt.
+
+    \item \textbf{Veranstaltungsplattformen: } Die Nutzerinnen und Nutzer können Tickets online buchen und bezahlen - der Vertragsabschluss erfolgt vollständig digital. Damit erfüllen diese Plattformen die gesetzlichen Kriterien und müssen barrierefrei gestaltet sein, um allen Menschen den Zugang zu kulturellen und sozialen Veranstaltungen zu ermöglichen. Dieser Bereich ist vor allem für Mrija Manager relevant.
+
+%    \item \textbf{Öffentliche Verwaltungsportale:} Webseiten von Behörden und öffentlichen Institutionen, die Informationen und Dienstleistungen für Bürger bereitstellen.
+%    \item \textbf{E-Commerce:} Online-Shops und Handelsplattformen, die Produkte und Dienstleistungen anbieten.
+%    \item \textbf{Finanzdienstleistungen:} Webseiten von Banken, Versicherungen und anderen Finanzdienstleistern, die Informationen und Dienstleistungen im Finanzbereich anbieten.
+%    \item \textbf{Mobilitätsdienste:} Webseiten von Verkehrsunternehmen und Mobilitätsanbietern, die Informationen und Dienstleistungen im Bereich Mobilität bereitstellen.
+%    \item \textbf{Medienseiten und Nachrichtendienste:} Webseiten von Zeitungen, Zeitschriften und anderen Medienanbietern, die Informationen und Nachrichten bereitstellen.
+\end{enumerate}
 
 Als vertrauenswürdige Nachrichtenquelle habe ich die tagesschau ausgewählt. Diese ist eine der bekanntesten Nachrichtensendungen in Deutschland und wird von der ARD produziert. Die Webseite ist unter \url{https://www.tagesschau.de} zu finden. Nach dem Reuters Institute for the Study of Journalism ist die tagesschau die Nachrichtenquelle, der die meisten Deutschen vertrauen. Die Webseite ist ein gutes Beispiel für eine Nachrichtenquelle, die sich an ein breites Publikum richtet und daher auch für Menschen mit Behinderungen zugänglich sein sollte \parencite[vgl.][]{statista_nachrichtenquellen_2024}.
 
-Einer Statista Umfrage nach ist Eventim einer bekanntesteten Veranstaltungsticketanbieter im Jahr 2022. Auch der Mrija Manager orientiert sich in einigen Punkten an den großen Anbietern \parencite[vgl.][]{statista_veranstaltungsanbieter_2022}. Daher ist eine Plattform wie Eventim ein gutes Beispiel für eine Plattform, die man auf Barrierefreiheit testen kann. Die Website ist unter \url{https://eventim.de} zu finden.
+Einer Statista Umfrage nach ist Eventim einer bekanntesteten Veranstaltungsticketanbieter im Jahr 2022\parencite[vgl.][]{statista_veranstaltungsanbieter_2022}. Auch der Mrija Manager orientiert sich in einigen Punkten an den großen Anbietern. Aufgrund der Relevanz und Verbreitung von Eventim, sollte man diese Seite auf Barrierefreiheit untersuchen. Die Website ist unter \url{https://eventim.de} zu finden.
 
 Die Website der staatlichen Fachhochschule Flensburg bietet sich in der Kategorie der öffentlichen Verwaltungsportale an. Die Hochschule Flensburg ist die drittgrößte Fachhochschule in Schleswig-Holstein und einer der ältesten dazu \parencite[vgl.][]{statistiknord_hochschulen_2022}. Die Website ist unter \url{https://hs-flensburg.de} abzurufen.
 
