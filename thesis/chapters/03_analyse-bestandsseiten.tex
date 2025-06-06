@@ -43,8 +43,59 @@ Die Website der staatlichen Fachhochschule Flensburg bietet sich in der Kategori
 \section{Methodik der Analyse}
 Für die Analyse werden zwei verschiedene Methoden verwendet. Zunächst werden mit den bereits vorgestellten Tools automatisierte Tests der zu analysierenden Seiten durchgeführt. Mit Hilfe der Axe-Dev-Tools können Fehler bzw. die Nichteinhaltung der Norm EN 301 549 angezeigt werden. Wave dient als Gegenprüfung, die dann auf den WCAG 2.1 AA basiert.
 
-Diese Tests sind schnell und einfach durchzuführen, liefern aber nur einen groben Überblick über die Barrierefreiheit der Seite. Sie sind daher nicht als alleinige Grundlage für die Analyse geeignet. 
+Diese Tests sind schnell und einfach durchzuführen, liefern aber nur einen technischen Überblick über die Barrierefreiheit der Seite. Sie sind daher nicht als alleinige Grundlage für die Analyse geeignet. 
 
-Deshalb werden die Ergebnisse der automatisierten Tests anschließend manuell überprüft. Dabei wird die Seite auf verschiedene Kriterien hin untersucht, die für die Barrierefreiheit wichtig sind. Diese Kriterien orientieren sich an den WCAG 2.1 Richtlinien bis einschließlich Level AA. Diese Kriterien sind auch so in der europäischen Norm EN 301 549 \parencite[vgl.][]{etsi_en301549_2025} zu finden. Ein Kriterienbogen hilft dabei die einzelnen Richtlinien zu überprüfen.
+Zusätzlich werden die Seiten halbautomatisiert getestet. Axe-Dev-Tools bietet die Möglichkeit sogenannte Guided-Tests durchzuführen. Dabei werden bestimmte Elemente mithilfe von festdefinierten Kriterien und manuellen Durchführungen genauer untersucht. Das sind zum Beispiel Tests von Formularen oder der Tastaturbedienbarkeit. Diese Tests sind aufwendiger, liefern aber auch genauere Ergebnisse. Sie sind daher für die Analyse der Seiten besonders wichtig.
+
+Auf ein manuelles Testen der Seiten mithilfe von Screenreadern wurde verzichtet, da in den Vorgesprächen mit den verschiedenen Verbänden und Institutionen schon darauf hingewiesen wurde, dass ein Mensch ohne Beeinträchtigung nicht in der Lage ist, die Seiten so zu testen, wie es ein Mensch mit Behinderung tun würde. Daher würde man an so eine Durchführung ganz anders herangehen und auch andere Ergebnisse erzielen. Außerdem ist es nicht möglich, alle Arten von Behinderungen zu simulieren. Daher wurde auf diese Methode verzichtet.
+
+Im Rahmen einer weiteren Studie könnte man überlegen, diese Tests von Menschen mit Behinderungen durchführen zu lassen. Diese könnten dann auch die Ergebnisse der automatisierten Tests überprüfen und gegebenenfalls anpassen. Dies würde die Ergebnisse der Analyse weiter verbessern und die Barrierefreiheit der Seiten noch genauer untersuchen. In dieser Arbeit soll aber ein Überblick über die Barrierefreiheit der Seiten gegeben werden. Die Ergebnisse der automatisierten Tests sind daher ausreichend, um die Seiten zu analysieren und Aussagen über die Barrierefreiheit zu treffen.
 
 \section{Ergebnisse der automatisierten Tests}
+\begin{tikzpicture}
+\begin{axis}[
+            width=\textwidth,
+            height=10cm,
+            ybar,
+            bar width=12pt,
+            xlabel={WCAG-Kriterium},
+            ylabel={Fehleranzahl},
+            symbolic x coords={ 9.1.1.1, 9.1.3.1, 9.1.4.1, 9.1.4.3, 9.1.4.4, 9.2.4.4, 9.3.3.2, 9.4.1.2},
+            xtick=data,
+            x tick label style={rotate=45, anchor=east},
+            ymin=0,
+            ymax=400,
+            enlarge x limits=0.1,
+            legend style={cells={anchor=west}, legend pos=north east},
+            nodes near coords,
+            nodes near coords style={font=\scriptsize},
+        ]
+\addplot table[x=WCAG-Kriterium,y=Fehleranzahl_axe,col sep=tab] {wcag_analyse-summary.csv};
+\addplot table[x=WCAG-Kriterium,y=Fehleranzahl_WAVE,col sep=tab] {wcag_analyse-summary.csv};
+\legend{axe,WAVE}
+\end{axis}
+\end{tikzpicture}
+
+\begin{tikzpicture}
+\begin{axis}[
+            width=\textwidth,
+            height=10cm,
+            ybar,
+            bar width=12pt,
+            xlabel={WCAG-Kriterium},
+            ylabel={Fehleranzahl},
+            symbolic x coords={Wahrnehmbar, Bedienbar, Verständlich, Robust},
+            xtick=data,
+            x tick label style={anchor=center, yshift=-10pt},
+            ymin=0,
+            ymax=1000,
+            enlarge x limits=0.1,
+            legend style={cells={anchor=west}, legend pos=north east},
+            nodes near coords,
+            nodes near coords style={font=\scriptsize},
+        ]
+\addplot table[x=Name,y=Fehleranzahl_axe,col sep=tab] {wcag_analyse-summary_categories.csv};
+\addplot table[x=Name,y=Fehleranzahl_WAVE,col sep=tab] {wcag_analyse-summary_categories.csv};
+\legend{axe,WAVE}
+\end{axis}
+\end{tikzpicture}
