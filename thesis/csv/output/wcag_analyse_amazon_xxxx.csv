@@ -1,0 +1,4 @@
+WCAG-Kriterium	Name	Beschreibung	Fehleranzahl_axe	Fehleranzahl_WAVE
+9.1.1.1	Nicht-Text-Inhalt	Alternative Texte für Bilder und andere Nicht-Text-Inhalte vorhanden?	0	3
+9.2.4.4	Linkzweck (im Kontext)	Ist der Zweck von Links verständlich?	3	0
+9.4.1.2	Name, Rolle, Wert	Haben UI-Elemente korrekte ARIA-Attribute?	11	0

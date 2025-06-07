@@ -1,0 +1,5 @@
+WCAG-Kriterium	Name	Beschreibung	Fehleranzahl_axe	Fehleranzahl_WAVE
+9.1.4.1	Farbgebrauch	Werden Farben nicht allein zur Informationsvermittlung genutzt?	1	0
+9.1.4.3	Mindestkontrast	Sind die Farbkontraste ausreichend?	10	25
+9.2.1.1	Tastaturbedienung	Ist die Website vollständig per Tastatur bedienbar?	3	0
+9.2.4.7	Fokus sichtbar	Ist der Tastaturfokus immer erkennbar?	1	0

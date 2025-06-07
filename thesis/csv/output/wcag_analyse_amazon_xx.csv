@@ -1,0 +1,4 @@
+WCAG-Kriterium	Name	Beschreibung	Fehleranzahl_axe	Fehleranzahl_WAVE
+9.1	Wahrnehmbar		0	3
+9.2	Bedienbar		3	0
+9.4	Robust		11	0

@@ -1,0 +1,7 @@
+WCAG-Kriterium	Name	Beschreibung	Fehleranzahl_axe	Fehleranzahl_WAVE
+9.1.1.1	Nicht-Text-Inhalt	Alternative Texte für Bilder und andere Nicht-Text-Inhalte vorhanden?	0	6
+9.1.4.3	Mindestkontrast	Sind die Farbkontraste ausreichend?	12	20
+9.2.1.1	Tastaturbedienung	Ist die Website vollständig per Tastatur bedienbar?	1	0
+9.2.4.4	Linkzweck (im Kontext)	Ist der Zweck von Links verständlich?	1	6
+9.2.4.7	Fokus sichtbar	Ist der Tastaturfokus immer erkennbar?	2	0
+9.4.1.2	Name, Rolle, Wert	Haben UI-Elemente korrekte ARIA-Attribute?	2	0
