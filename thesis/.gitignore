@@ -39,11 +39,6 @@
 .idea/       # IntelliJ/CLion/PhpStorm/WebStorm Projekte
 *.iml
 
-# Bilder
-*.jpg
-*.png
-*.pdf_tex    # Importierte LaTeX-Bilder-Dateien
-
 # Sonstige temporäre Verzeichnisse
 _build/
 build/
