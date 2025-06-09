@@ -51,6 +51,8 @@ Auf ein vollständiges manuelles Testen der Seiten mithilfe von Screenreadern wu
 
 Im Rahmen einer weiteren Studie könnte man überlegen, diese Tests von Menschen mit Behinderungen durchführen zu lassen. Diese könnten dann auch die Ergebnisse der automatisierten Tests überprüfen und gegebenenfalls anpassen. Dies würde die Ergebnisse der Analyse weiter verbessern und die Barrierefreiheit der Seiten noch genauer untersuchen. In dieser Arbeit soll aber ein Überblick über die Barrierefreiheit der Seiten gegeben werden. Die Ergebnisse der automatisierten Tests sind daher ausreichend, um die Seiten zu analysieren und Aussagen über die Barrierefreiheit zu treffen.
 
+Von den ausgewählten Seiten werden die Startseite und 2-3 Unterseiten getestet. Dabei wird darauf geachtet, dass die Seiten eine hohe Relevanz haben. Bei Online-Shops sind dies zum Beispiel die Produktseite und Warenkorb. Je nach Kategorie können das unterschiedliche Seiten sein. Wichtig ist, dass man das Zeil des Anbieters erreichen kann.
+
 \section{Ergebnisse der Tests}
 \begin{tikzpicture}
 \begin{axis}[
@@ -110,7 +112,7 @@ Die Startseite weist eine geringe Anzahl an Fehlern auf. Ein Fehler tritt aber w
     \caption{Fehlerhafte Verwendung von Listen-Elementen}
 \end{figure}
 
-Manche Fehler betreffen auch gleich mehrere Regeln, so wurde von WAVE festgestellt, dass es kein Label bei einem Suchfeld gibt. Dies Verstößt gleich gegen 4 WCAG-Kriterien 1.1.1, 1.3.1 2.4.6 und 3.3.2.
+Manche Fehler betreffen auch gleich mehrere Regeln, so wurde von WAVE festgestellt, dass es kein Label bei einem Suchfeld gibt. Dies Verstößt gleich gegen 4 WCAG-Kriterien 1.1.1 "Nicht-Text-Inhalt", 1.3.1 "Info und Beziehungen", 2.4.6 "Überschriften und Beschriftungen" und 3.3.2 "Labels oder Anleitungen".
 
 \begin{figure}
     \includegraphics[width=\textwidth]{img/sparkasse_no-label.png}
@@ -143,5 +145,37 @@ Manche Fehler betreffen auch gleich mehrere Regeln, so wurde von WAVE festgestel
     \end{tikzpicture}
     \caption{Auswertung Analyse Sparkasse}
 \end{figure}
-\include{csv/output/all_graphs} 
+
+
+
+\subsection{Analyse ING}
+\begin{figure}
+    \includegraphics[width=\textwidth]{img/sparkasse_no-label.png}
+    \caption{Fehlendes Label bei einem Suchfeld}
+\end{figure}
+
+\subsection{Wcag Analyse Ing}
+\begin{tikzpicture}
+\begin{axis}[
+    width=\textwidth,
+    height=10cm,
+    ybar,
+    bar width=12pt,
+    xlabel={WCAG-Kriterium},
+    ylabel={Fehleranzahl},
+    symbolic x coords={ 9.1.3.1, 9.1.4.4, 9.2.4.4, 9.4.1.2 },
+    xtick=data,
+    x tick label style={rotate=45, anchor=east},
+    ymin=0,
+    ymax=350,
+    enlarge x limits=0.1,
+    legend style={cells={anchor=west}, legend pos=north east},
+    nodes near coords,
+    nodes near coords style={font=\scriptsize},
+]
+\addplot table[x=WCAG-Kriterium,y=Fehleranzahl_axe,col sep=tab] {csv/output/wcag_analyse_ing_xxxx.csv};
+\addplot table[x=WCAG-Kriterium,y=Fehleranzahl_WAVE,col sep=tab] {csv/output/wcag_analyse_ing_xxxx.csv};
+\legend{axe,WAVE}
+\end{axis}
+\end{tikzpicture}
     
