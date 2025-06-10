@@ -54,72 +54,24 @@ Im Rahmen einer weiteren Studie könnte man überlegen, diese Tests von Menschen
 Von den ausgewählten Seiten werden die Startseite und 2-3 Unterseiten getestet. Dabei wird darauf geachtet, dass die Seiten eine hohe Relevanz haben. Bei Online-Shops sind dies zum Beispiel die Produktseite und Warenkorb. Je nach Kategorie können das unterschiedliche Seiten sein. Wichtig ist, dass man das Zeil des Anbieters erreichen kann.
 
 \section{Ergebnisse der Tests}
-\begin{tikzpicture}
-\begin{axis}[
-            width=\textwidth,
-            height=10cm,
-            ybar,
-            bar width=12pt,
-            xlabel={WCAG-Kriterium},
-            ylabel={Fehleranzahl},
-            symbolic x coords={9.1.1.1, 9.1.3.1, 9.1.4.1, 9.1.4.3, 9.1.4.4, 9.2.1.1, 9.2.4.4, 9.2.4.6, 9.2.4.7, 9.3.3.2, 9.4.1.2},
-            xtick=data,
-            x tick label style={rotate=45, anchor=east},
-            ymin=0,
-            ymax=800,
-            enlarge x limits=0.1,
-            legend style={cells={anchor=west}, legend pos=north east},
-            nodes near coords,
-            nodes near coords style={font=\scriptsize},
-        ]
-\addplot table[x=WCAG-Kriterium,y=Fehleranzahl_axe,col sep=tab] {csv/output/wcag_analyse_summary_xxxx.csv};
-\addplot table[x=WCAG-Kriterium,y=Fehleranzahl_WAVE,col sep=tab] {csv/output/wcag_analyse_summary_xxxx.csv};
-\legend{axe,WAVE}
-\end{axis} Diese Tests sind aber nicht so umfangreich wie die Tests mit Screenreadern.
-\end{tikzpicture}
-
-\begin{tikzpicture}
-\begin{axis}[
-            width=\textwidth,
-            height=10cm,
-            ybar,
-            bar width=12pt,
-            xlabel={WCAG-Kriterium},
-            ylabel={Fehleranzahl},
-            symbolic x coords={Wahrnehmbar, Bedienbar, Verständlich, Robust},
-            xtick=data,
-            x tick label style={anchor=center, yshift=-10pt},
-            ymin=0,
-            ymax=1000,
-            enlarge x limits=0.1,
-            legend style={cells={anchor=west}, legend pos=north east},
-            nodes near coords,
-            nodes near coords style={font=\scriptsize},
-        ]
-\addplot table[x=Name,y=Fehleranzahl_axe,col sep=tab] {csv/output/wcag_analyse_summary_xx.csv};
-\addplot table[x=Name,y=Fehleranzahl_WAVE,col sep=tab] {csv/output/wcag_analyse_summary_xx.csv};
-\legend{axe,WAVE}
-\end{axis}
-\end{tikzpicture}
-
 \subsection{Analyse Sparkasse}
 Die Sparkasse hat in der Entwicklung ihrer Startseite auch React und MUI verwendet. Deshalb ist eine Betrachtung dieser Seite besonders wertvoll. 
 
-Die Startseite weist eine geringe Anzahl an Fehlern auf. Ein Fehler tritt aber wiederholt auf. Dabei handelt es sich um einen Verstoß gegen Kriterium 1.3.1 "Info und Beziehungen". Konkret werden Listenelemente <li> nicht korrekt in einer Liste <ul> oder <ol> verwendet. Dabei ist das HTML-Element mit <li> richtig angelegt aber als role wurde article verwendet. Somit wird die Liste nicht korrekt interpretiert. Dies ist ein schwerwiegender Fehler, da er die Struktur der Seite beeinträchtigt und die Navigation für Menschen mit Behinderungen erschwert.
+Die Startseite weist eine geringe Anzahl an Fehlern auf. Ein Fehler tritt aber wiederholt auf. Dabei handelt es sich um einen Verstoß gegen Kriterium 1.3.1 "Info und Beziehungen". Konkret werden Listenelemente <li> nicht korrekt in einer Liste <ul> oder <ol> verwendet. Dabei ist das HTML-Element mit <li> richtig angelegt aber als role wurde article verwendet. Somit wird die Liste nicht korrekt interpretiert.
 
-\begin{figure}[h]
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{img/sparkasse_ul-li-wrong-role.png}
     \caption{Fehlerhafte Verwendung von Listen-Elementen}
 \end{figure}
 
 Manche Fehler betreffen auch gleich mehrere Regeln, so wurde von WAVE festgestellt, dass es kein Label bei einem Suchfeld gibt. Dies Verstößt gleich gegen 4 WCAG-Kriterien 1.1.1 "Nicht-Text-Inhalt", 1.3.1 "Info und Beziehungen", 2.4.6 "Überschriften und Beschriftungen" und 3.3.2 "Labels oder Anleitungen".
 
-\begin{figure}
+\begin{figure}[H]
     \includegraphics[width=\textwidth]{img/sparkasse_no-label.png}
     \caption{Fehlendes Label bei einem Suchfeld}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
     \begin{tikzpicture}
         \begin{axis}[
             width=\textwidth,
@@ -147,14 +99,43 @@ Manche Fehler betreffen auch gleich mehrere Regeln, so wurde von WAVE festgestel
 \end{figure}
 
 
-
 \subsection{Analyse ING}
-\begin{figure}
-    \includegraphics[width=\textwidth]{img/sparkasse_no-label.png}
-    \caption{Fehlendes Label bei einem Suchfeld}
+Die Analyse der ING hat ergeben, dass weniger Fehler auftreten als bei der Sparkasse. Die Startseite weist keine Fehler auf. Die Unterseiten, wie die Login-Seite, weisen aber doch Fehler auf. Einige davon sind auch über die Seiten hinweg inkonsistent.
+
+So sind die Social Media Icons auf der Startseite noch korrekt mit einem Label versehen, während auf der Login-Seite kein Label mehr angegeben ist. Die folgende Abbildung 4.4 zeigt das HTML der Social Media Icons auf der Startseite. 
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{img/ing_sm-accessible-name.png}
+    \caption{Social Media Icons mit Label}
 \end{figure}
 
-\subsection{Wcag Analyse Ing}
+Im Vergleich dazu steht die Abbildung 4.5 der Login-Seite, in der kein Label mehr angegeben ist.
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{img/ing_login_sm-no-accessible-name.png}
+    \caption{Social Media Icons ohne Label}
+\end{figure}
+
+Zusätzlich wurde das Scaling mit user-scalable=no ausgeschaltet. Zu sehen in Abbildung 4.6.
+
+\begin{figure}[H]
+\begin{lstlisting}[language=html]
+<meta name="viewport" 
+    content="width=device-width,
+    initial-scale=1,
+    maximum-scale=1,
+    minimum-scale=1,
+    user-scalable=no"
+    >
+\end{lstlisting}
+\caption{Scaling mit user-scalable=no}
+\end{figure}
+
+Die Anzahl der Fehler ist auf die drei getesteten Seiten aber überschaubar und die Startseite ist mit keinem Fehler ein gutes Beispiel für eine Barrierefreie Umsetzung. 
+
+Im Vergleich zur Sparkasse überscheiden sich die Fehler zum größten Teil. Bis auf den Scaling-Fehler betreffen die Fehler, die gefunden wurden, auch die Sparkasse. Dazu gehören die korrekte Verwendung von Aria-Atrributen, das Verständnis von dem Zweck eines Links und die richtige Semantik vom HTML. 
+
+\begin{figure}[H]
 \begin{tikzpicture}
 \begin{axis}[
     width=\textwidth,
@@ -178,4 +159,6 @@ Manche Fehler betreffen auch gleich mehrere Regeln, so wurde von WAVE festgestel
 \legend{axe,WAVE}
 \end{axis}
 \end{tikzpicture}
+\caption{Auswertung Analyse ING}
+\end{figure}
     

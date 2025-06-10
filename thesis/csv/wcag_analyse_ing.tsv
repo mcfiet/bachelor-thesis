@@ -1,12 +1,12 @@
 WCAG-Kriterium	Name	Beschreibung	Fehleranzahl_axe	Fehleranzahl_WAVE
-9.1	Wahrnehmbar		5	2
+9.1	Wahrnehmbar		3	2
 9.1.1.1	Nicht-Text-Inhalt	Alternative Texte für Bilder und andere Nicht-Text-Inhalte vorhanden?		
 9.1.2.1	Nur-Audio und Nur-Video (vorab aufgezeichnet)	Sind Transkripte oder Beschreibungen für Medien vorhanden?		
 9.1.2.2	Untertitel (vorab aufgezeichnet)	Sind Untertitel für Videos verfügbar?		
 9.1.2.3	Audiodeskription oder Medienalternative (vorab aufgezeichnet)	Wird eine Audiodeskription oder alternative Inhalte angeboten?		
 9.1.2.4	Untertitel (live)	Sind Live-Untertitel für Echtzeitmedien verfügbar?		
 9.1.2.5	 Audiodeskription (vorab aufgezeichnet)	Wird eine Audiodeskription für Videos bereitgestellt?		
-9.1.3.1	Info und Beziehungen	Sind semantische HTML-Strukturen vorhanden?	3	2
+9.1.3.1	Info und Beziehungen	Sind semantische HTML-Strukturen vorhanden?	1	2
 9.1.3.2	Bedeutung der Reihenfolge	Ist die Reihenfolge der Inhalte logisch und verständlich?		
 9.1.3.3	Sensorische Merkmale	Sind keine rein sensorischen Hinweise erforderlich?		
 9.1.3.4	Orientierung	Kann die Website im Hoch- und Querformat genutzt werden?		
@@ -49,7 +49,7 @@ WCAG-Kriterium	Name	Beschreibung	Fehleranzahl_axe	Fehleranzahl_WAVE
 9.3.3.2	Labels oder Anleitungen	Gibt es klare Beschriftungen und Anleitungen?		
 9.3.3.3	Error suggestion			
 9.3.3.4	Error prevention (legal, financial, data)			
-9.4	Robust		16	2
+9.4	Robust		5	2
 9.4.1.1	Parsing	Sind HTML-Fehler vermieden?		
-9.4.1.2	Name, Rolle, Wert	Haben UI-Elemente korrekte ARIA-Attribute?	16	2
+9.4.1.2	Name, Rolle, Wert	Haben UI-Elemente korrekte ARIA-Attribute?	5	2
 9.4.1.3	Statusmeldungen	Sind Statusmeldungen für Screenreader zugänglich?		
