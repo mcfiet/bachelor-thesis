@@ -23,6 +23,8 @@ for filename in os.listdir(input_dir):
 
         # Basis-Dateiname ohne .tsv
         base_name = os.path.splitext(filename)[0]
+        # Array von Wörtern getrennt durch "_"
+        base_name_parts = base_name.split("_")
         subsection_name = base_name.replace("_", " ").title()
 
         # Variante 1: nur x.x
@@ -40,7 +42,7 @@ for filename in os.listdir(input_dir):
 
         # LaTeX-Code generieren
         latex_code = f"""
-\\subsection{{{subsection_name}}}
+\\begin{{figure}}[H]
 \\begin{{tikzpicture}}
 \\begin{{axis}}[
     width=\\textwidth,
@@ -64,6 +66,8 @@ for filename in os.listdir(input_dir):
 \\legend{{axe,WAVE}}
 \\end{{axis}}
 \\end{{tikzpicture}}
+\\caption{{Auswertung Analyse {base_name_parts[2]}}}
+\\end{{figure}}
 """.strip()
 
         # Einzelausgabe speichern

@@ -1,4 +1,4 @@
-\subsection{Wcag Analyse Amazon}
+\begin{figure}[H]
 \begin{tikzpicture}
 \begin{axis}[
     width=\textwidth,
@@ -7,7 +7,7 @@
     bar width=12pt,
     xlabel={WCAG-Kriterium},
     ylabel={Fehleranzahl},
-    symbolic x coords={ 9.1.1.1, 9.1.3.1, 9.1.4.1, 9.2.4.4, 9.4.1.2 },
+    symbolic x coords={ 9.1.1.1, 9.1.3.1, 9.1.4.3, 9.2.4.4, 9.2.4.6, 9.2.4.7, 9.3.3.2, 9.4.1.2 },
     xtick=data,
     x tick label style={rotate=45, anchor=east},
     ymin=0,
@@ -17,8 +17,10 @@
     nodes near coords,
     nodes near coords style={font=\scriptsize},
 ]
-\addplot table[x=WCAG-Kriterium,y=Fehleranzahl_axe,col sep=tab] {csv/output/wcag_analyse_amazon_xxxx.csv};
-\addplot table[x=WCAG-Kriterium,y=Fehleranzahl_WAVE,col sep=tab] {csv/output/wcag_analyse_amazon_xxxx.csv};
+\addplot table[x=WCAG-Kriterium,y=Fehleranzahl_axe,col sep=tab] {csv/output/wcag_analyse_Otto_xxxx.csv};
+\addplot table[x=WCAG-Kriterium,y=Fehleranzahl_WAVE,col sep=tab] {csv/output/wcag_analyse_Otto_xxxx.csv};
 \legend{axe,WAVE}
 \end{axis}
 \end{tikzpicture}
+\caption{Auswertung Analyse Otto}
+\end{figure}
