@@ -232,6 +232,49 @@ Insgesamt treten auf der Seite deutlich mehr Fehler auf als bei den vorherigen S
 \end{figure}
 
 \subsection{Analyse HVV Hamburger Verkehrsverbund GmbH}
+Bei der HVV sind die häufigsten Fehler, der fehlende Kontrast von Text zu Hintergrund. Die Primärfarbe ist ein rot, welches auf weiß nicht auseichend gut zu erkennen ist. Da viele Elemnte in dem Rot gehalten sind, treten auch viele Fehler auf der Website auf. Damit wurde das Kriterium 1.4.3 "Mindestkontrast" nicht eingehalten.
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{img/hvv_failed-minimum-contrast.png}
+    \caption{Kontrastprobleme auf der Startseite}
+\end{figure}
+Auch bei der Tastaturbedienbarkeit sind auf der Seite einige Fehler aufgetreten. So ist es nicht möglich den Button "Eingabe löschen" in dem Routenplaner zu klicken. Es besteht immer noch die Möglichkeit, den Text manuell zu löschen, aber der Button erfüllt nicht seinen Zweck. Dies ist ein Verstoß gegen Kriterium 2.1.1 "Tastaturbedienbarkeit".
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{img/hvv_no-perform-only-keyboard.png}
+    \caption{Button ohne Tastaturbedienbarkeit}
+\end{figure}
+
+Zusätlich ist bei dem "Suchen"-Button kein visueller Fokus gegeben. Es wurde beim Fokussieren nur ein Schlagschatten verwendet, der kaum zu erkennen ist. Das reicht als visueller Fokus nicht aus und verletzt das Kriterium 2.4.7 "Fokus sichtbar".
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/hvv_button-without-focus.png}
+        \caption{Button ohne Fokus}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{0.49\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{img/hvv_button-with-focus.png}
+        \caption{Button mit Fokus}
+    \end{minipage}
+\end{figure}
+
+Auch die Links sind nicht korrekt umgesetzt. Das Kriterium 1.4.1 "Verwendung von Farben" sieht vor, dass Links auch ohne Farben funktionieren müssen. Da einige Links sich aber nur durch die Farbe von dem restlichen Text unterscheiden, ist dies nicht gegeben.
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{img/hvv_links-not-only-rely-on-color.png}
+    \caption{Link nur durch Farbe unterschieden}
+\end{figure}
+
+Beim Kauf eines Tickets fehlen bei den Inputs teilweise auch die Labels. Während die Eingabefelder für die Geltungsbereich und Zuschlag korrekt mit Labels versehen sind, fehlt das Label bei dem Eingabefeld für die die Gültigkeit ab einem angegebenen Datum. Dies ist ein Verstoß gegen Kriterium 4.1.2 "Name, Rolle, Wert".
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{img/hvv_no-label.png}
+    \caption{Fehlendes Label bei einem Eingabefeld}
+\end{figure}
+
+Insgesamt sind die Fehler pro Kriterium eher niedrig, allerdings gibt es viele Kriterien, die nicht eingehalten worden sind. Besonders ausschlagebend waren die Kontrastfehler, da sehr viel Text in dem schlecht sichtbaren Rot gehalten ist.
+
 \begin{figure}[H]
 \begin{tikzpicture}
 \begin{axis}[
@@ -241,7 +284,7 @@ Insgesamt treten auf der Seite deutlich mehr Fehler auf als bei den vorherigen S
     bar width=12pt,
     xlabel={WCAG-Kriterium},
     ylabel={Fehleranzahl},
-    symbolic x coords={ 9.1.1.1, 9.1.3.1, 9.1.4.1, 9.1.4.3, 9.2.1.1, 9.2.4.4, 9.2.4.6, 9.2.4.7, 9.3.3.2, 9.4.1.2 },
+    symbolic x coords={ 9.1.1.1, 9.1.3.1, 9.1.4.3, 9.2.1.1, 9.2.4.4, 9.2.4.6, 9.2.4.7, 9.3.3.2, 9.4.1.2 },
     xtick=data,
     x tick label style={rotate=45, anchor=east},
     ymin=0,
@@ -257,4 +300,70 @@ Insgesamt treten auf der Seite deutlich mehr Fehler auf als bei den vorherigen S
 \end{axis}
 \end{tikzpicture}
 \caption{Auswertung Analyse HVV}
+\end{figure}
+
+\subsection{Analyse Telekom}
+Auf allen Seiten ist die Navigation konstant gehalten. In der Navigation ist ein fehlender alternativer Text beim Logo (Abbildung 4.22) und damit ist dieser Fehler auch auf jeder Seite. 
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{img/telekom_no-alt-text_logo.png}
+    \caption{Fehlender alternativer Text}
+\end{figure}
+
+Sonst findet man auf der Startseite keine Fehler, bis auf einem fehlendem sichtbaren Fokus von zwei Checkboxen. 
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{img/telekom_checkbox-no-focus.png}
+    \caption{Fehlende Fokussierung bei Checkboxen}
+\end{figure}
+
+Außerdem wurde die Verfügbarkeit-Seite untersucht, um zu sehen, ob man sich auch ohne Barriere Informationen einholen kann. Dabei wurde festgestellt, dass die Seite nicht vollständig barrierefrei ist. 
+
+Die Verfügbarkeit lässt sich über ein PopUp-Fenster abfragen. Dabei hat der Schließen-Button kein Aria-Label und ist damit nicht korrekt benannt.
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{img/telekom_no-aria-label_close-button.png}
+    \caption{Fehlendes Aria-Label bei einem Schließen-Button}
+\end{figure}
+
+Dazu haben die Input-Felder, in denen ich die Adresse eingeben kann, kein Label. Dies ist ein Verstoß gegen Kriterium 4.1.2 "Name, Rolle, Wert".
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{img/telekom_no-label.png}
+    \caption{Fehlendes Label bei einem Eingabefeld}
+\end{figure}
+
+Die Breadcrumb-Navigation, die helfen soll, sich auf der Seite zurecht zu finden, ist nicht korrekt umgesetzt. Es ist als Liste angelegt, aber die einzelnen Listenelemente sind keine semantisch richtigen Kind-Elemente. Anstelle eines <li> wurde ein <span> verwendet. Dies ist ein Verstoß gegen Kriterium 1.3.1 "Info und Beziehungen".
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{img/telekom_ol-no-li.png}
+    \caption{Breadcrumb-Navigation}
+\end{figure}
+
+Die Varianz an unterschiedlichen Fehlern ist bei der Telekom wieder geringer. Allerdings sind die Fehler, die auftreten, auch auf anderen Seiten zu finden. So ist der Fehler mit dem fehlenden alternativen Text bei dem Logo auch auf der Startseite und auf der Verfügbarkeit-Seite zu finden. Auch die Breadcrumb-Navigation ist auf mehreren Seiten zu finden.
+
+\begin{figure}[H]
+\begin{tikzpicture}
+\begin{axis}[
+    width=\textwidth,
+    height=10cm,
+    ybar,
+    bar width=12pt,
+    xlabel={WCAG-Kriterium},
+    ylabel={Fehleranzahl},
+    symbolic x coords={ 9.1.1.1, 9.1.3.1, 9.1.4.3, 9.2.4.4, 9.2.4.7, 9.4.1.2 },
+    xtick=data,
+    x tick label style={rotate=45, anchor=east},
+    ymin=0,
+    ymax=350,
+    enlarge x limits=0.1,
+    legend style={cells={anchor=west}, legend pos=north east},
+    nodes near coords,
+    nodes near coords style={font=\scriptsize},
+]
+\addplot table[x=WCAG-Kriterium,y=Fehleranzahl_axe,col sep=tab] {csv/output/wcag_analyse_Telekom_xxxx.csv};
+\addplot table[x=WCAG-Kriterium,y=Fehleranzahl_WAVE,col sep=tab] {csv/output/wcag_analyse_Telekom_xxxx.csv};
+\legend{axe,WAVE}
+\end{axis}
+\end{tikzpicture}
+\caption{Auswertung Analyse Telekom}
 \end{figure}
