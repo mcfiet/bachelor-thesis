@@ -20,7 +20,7 @@ WCAG-Kriterium	Name	Beschreibung	Fehleranzahl_axe	Fehleranzahl_WAVE
 9.1.4.11	Nicht-Text-Kontrast	Haben UI-Elemente genügend Kontrast?		
 9.1.4.12	Textabstand	Kann der Zeilenabstand angepasst werden?		
 9.1.4.13	Inhalte bei Hover/Fokus	Sind Tooltipps und Popups zugänglich und steuerbar?		
-9.2	Bedienbar		294	110
+9.2	Bedienbar		222	223
 9.2.1.1	Tastaturbedienung	Ist die Website vollständig per Tastatur bedienbar?		
 9.2.1.2	Kein Tastaturfalle	Können alle Elemente problemlos per Tastatur verlassen werden?		
 9.2.1.4	Einzeltasten-Shortcuts	Werden keine problematischen Shortcuts genutzt?		
@@ -30,10 +30,10 @@ WCAG-Kriterium	Name	Beschreibung	Fehleranzahl_axe	Fehleranzahl_WAVE
 9.2.4.1	Blockumgehung	Gibt es eine Möglichkeit, Navigation zu überspringen?		
 9.2.4.2	Titel der Seite	Ist der Seitentitel aussagekräftig?		
 9.2.4.3	Fokusreihenfolge	Bewegen sich Nutzer in einer sinnvollen Reihenfolge durch die Seite?		
-9.2.4.4	Linkzweck (im Kontext)	Ist der Zweck von Links verständlich?	72	109
+9.2.4.4	Linkzweck (im Kontext)	Ist der Zweck von Links verständlich?		
 9.2.4.5	Mehrere Wege	Gibt es verschiedene Navigationsmöglichkeiten?		
 9.2.4.6	Überschriften und Beschriftungen	Sind Überschriften und Labels sinnvoll genutzt?		1
-9.2.4.7	Fokus sichtbar	Ist der Tastaturfokus immer erkennbar?	222	
+9.2.4.7	Fokus sichtbar	Ist der Tastaturfokus immer erkennbar?	222	222
 9.2.5.1	Pointer Gestures			
 9.2.5.2	Pointer cancellation			
 9.2.5.3	Label in name			
