@@ -27,3 +27,8 @@
     showstringspaces=false,                % Keine Leerzeichensymbole in Strings
     morekeywords={async, await}            % Weitere Keywords für ES6 und neuer
 }
+\NewDocumentCommand{\codeword}{v}{%
+\texttt{\textcolor{blue}{#1}}%
+}
+
+\lstset{language=HTML,keywordstyle={\bfseries \color{blue}}}
