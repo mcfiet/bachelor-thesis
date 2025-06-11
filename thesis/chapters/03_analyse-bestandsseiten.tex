@@ -50,14 +50,15 @@ Zusätzlich werden die Seiten halbautomatisiert getestet. Axe-Dev-Tools bietet d
 Auf ein vollständiges manuelles Testen der Seiten mithilfe von Screenreadern wurde verzichtet, da in den Vorgesprächen mit den verschiedenen Verbänden und Institutionen schon darauf hingewiesen wurde, dass ein Mensch ohne Beeinträchtigung nicht in der Lage ist, die Seiten so zu testen, wie es ein Mensch mit Behinderung tun würde. Daher würde man an so eine Durchführung ganz anders herangehen und auch andere Ergebnisse erzielen. Außerdem ist es nicht möglich, alle Arten von Behinderungen zu simulieren. Daher wurde auf diese Methode verzichtet. Es werden aber trotzdem teilweise manuelle Tests durchgeführt, um die Ergebnisse der halbautomatisierten Tests zu ergänzen.
 
 Im Rahmen einer weiteren Studie könnte man überlegen, diese Tests von Menschen mit Behinderungen durchführen zu lassen. Diese könnten dann auch die Ergebnisse der automatisierten Tests überprüfen und gegebenenfalls anpassen. Dies würde die Ergebnisse der Analyse weiter verbessern und die Barrierefreiheit der Seiten noch genauer untersuchen. In dieser Arbeit soll aber ein Überblick über die Barrierefreiheit der Seiten gegeben werden. Die Ergebnisse der automatisierten Tests sind daher ausreichend, um die Seiten zu analysieren und Aussagen über die Barrierefreiheit zu treffen.
+\textcolor{red}{{Vielleicht ans Ende in Ausblick verschieben}}
 
-Von den ausgewählten Seiten werden die Startseite und 2-3 Unterseiten getestet. Dabei wird darauf geachtet, dass die Seiten eine hohe Relevanz haben. Bei Online-Shops sind dies zum Beispiel die Produktseite und Warenkorb. Je nach Kategorie können das unterschiedliche Seiten sein. Wichtig ist, dass man das Zeil des Anbieters erreichen kann.
+Von den ausgewählten Seiten werden die Startseite und 2-3 Unterseiten getestet. Dabei wird versucht einen typischen Userflow zu imitieren. Bei Online-Shops sind dies zum Beispiel die Produktseite und Warenkorb. Je nach Kategorie können das unterschiedliche Seiten sein. Wichtig ist, dass man das Zeil des Anbieters erreichen kann.
 
 \section{Ergebnisse der Tests}
 \subsection{Analyse Sparkasse}
 Die Sparkasse hat in der Entwicklung ihrer Startseite auch React und MUI verwendet. Deshalb ist eine Betrachtung dieser Seite besonders wertvoll. 
 
-Die Startseite weist eine geringe Anzahl an Fehlern auf. Ein Fehler tritt aber wiederholt auf. Dabei handelt es sich um einen Verstoß gegen Kriterium 1.3.1 "Info und Beziehungen". Konkret werden Listenelemente <li> nicht korrekt in einer Liste <ul> oder <ol> verwendet. Dabei ist das HTML-Element mit <li> richtig angelegt aber als role wurde article verwendet. Somit wird die Liste nicht korrekt interpretiert.
+Die Startseite weist eine geringe Anzahl an Fehlern auf. Ein Fehler tritt aber wiederholt auf. Dabei handelt es sich um einen Verstoß gegen Kriterium 1.3.1 "Info und Beziehungen". Konkret werden Listenelemente \lstinline{<li>} nicht korrekt in einer Liste \lstinline{<ul>} oder \lstinline{<ol>} verwendet. Dabei ist das HTML-Element mit \lstinline{<li>} richtig angelegt aber als role wurde article verwendet. Somit wird die Liste nicht korrekt interpretiert.
 
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{img/sparkasse_ul-li-wrong-role.png}
