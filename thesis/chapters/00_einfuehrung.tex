@@ -1,20 +1,24 @@
 \section{Vorwort}
 \label{sec:vorwort}
+\begin{tcolorbox}[boxrule=0pt,sharp corners,enhanced,borderline west={2pt}{0pt}{blue}]
+    \textbf{Für die meisten ein nerviges Problem beim Browsen, für andere das Ende der Teilhabe.}
+\end{tcolorbox}
+Beim Thema Barrierefreiheit denken wir oft an Rampen, Aufzüge und automatische Türen. Durch die Digitalisierung und die zunehmende Nutzung von Webanwendungen ist es damit aber nicht mehr getan.
+
+Menschen werden durch Barrieren im Internet, speziell auf Webseiten, vom Zugang zu Informationen und Dienstleistungen ausgeschlossen. Diese Barrieren sind vielseitig und treffen nicht immer nur Menschen mit Behinderungen. Von älteren Menschen, die Schwierigkeiten mit der Bedienung von Geräten haben, über Menschen mit temporären Einschränkungen, bis hin zu Power-Usern, die einfach effizient mit der Tastatur navigieren wollen – Barrierefreiheit nützt mehr Menschen, als wir oft denken.
+
+\section{Motivation \& Problemstellung} 
+\label{sec:motivation}
+
 Mit dem Thema Barrierefreiheit bin ich zum ersten Mal während meines Studiums im Modul Webentwicklung in Berührung gekommen. Seitdem hat dieses Thema einen besonderen Stellenwert für mich.
 
 Bei unseren Anwendungen mussten wir immer besonders auf die semantische Struktur achten. Damit war ein Bereich der Barrierefreiheit abgedeckt. Durch viele Negativbeispiele wurde mir die Bedeutung der Barrierefreiheit bewusst. Durch fehlende oder eingeschränkte Barrierefreiheit schließt man einen Teil der Gesellschaft aus.
 
-Das Thema hat mich von Anfang an interessiert, da es mir Spaß gemacht hat, Möglichkeiten zu finden, Anwendungen barrierefreier zu gestalten. In den jeweiligen Modulen gab es dafür auch viel Unterstützung und wurde teilweise sogar vorausgesetzt. 
+Das Thema hat mich von Anfang an interessiert, da es mir Spaß gemacht hat, Möglichkeiten zu finden, Anwendungen barrierefreier zu gestalten. Vor allem hat es mir gezeigt, dass Barrierefreiheit erstens nicht nur Menschen mit Behinderungen hilft und zweitens, dass nicht so viel Aufwand nötig ist, eine Anwendung barrierefrei zu gestalten, wie oft angenommen wird. 
 
-Als ich mich dann neben dem Studium mit der Entwicklung von Webanwendungen selbstständig machte, blieb das Thema ein weiterer Bestandteil meiner Arbeit. Die Projekte, die ich für meine Kunden entwickelte, sollten weiterhin möglichst vielen Menschen zugänglich gemacht werden. Teilweise wurde dies sogar von den Kunden gefordert, was die Sache natürlich noch wichtiger machte. Schon damals war ich stolz darauf, dass meine Anwendungen barrierefrei waren und diverse Tests auf Barrierefreiheit bestanden hatten.
+Barrierefreiheit war ein viel belächeltes Thema, das aber nur von wenigen ernsthaft umgesetzt wurde. Das Thema ist bei Entwicklern sehr unbeliebt, da oft angenommen wird, dass es mit viel Aufwand und Bürokratie verbunden ist. Während meines Studiums und meiner freiberuflichen Tätigkeit habe ich jedoch gemerkt, dass man Barrierefreiheit sehr gut in seine Arbeit integrieren kann. Durch die fehlenden Vorgaben haben sich viele Entwickler aus der Verantwortung gestohlen, ihre Anwendungen barrierefrei zu gestalten.
 
-\section{Motivation \& Problemstellung} 
-\label{sec:motivation}
-Dabei habe ich aber nur meine Grundkenntnisse angewandt und gehofft, dass das ausreicht. Im Großen und Ganzen hat es für den Anfang auch gereicht. Es gab aber nie genaue Vorgaben, eher nur Richtlinien, an die man sich aber nicht halten musste. 
-
-Barrierefreiheit war ein viel belächeltes Thema, das aber nur von wenigen ernsthaft umgesetzt wurde. Das Thema ist bei Entwicklern sehr unbeliebt, weil es mit viel Aufwand und Bürokratie verbunden ist. Während meines Studiums und meiner freiberuflichen Tätigkeit habe ich jedoch gemerkt, dass man Barrierefreiheit sehr gut in seine Arbeit integrieren kann. Durch die fehlenden Vorgaben haben sich viele Entwickler aus der Verantwortung gestohlen, ihre Anwendungen barrierefrei zu gestalten.
-
-Dank der EU wurde eine Richtlinie auf den Weg gebracht, die in Deutschland durch das BFSG vorgeschrieben ist. Doch was bedeuten diese Vorgaben nun für die Entwickler, die sie in ihren Anwendungen umsetzen müssen? Wie bereits erwähnt, ist Barrierefreiheit in Entwicklerkreisen kein populäres Thema. Daher war es mein Ziel, mit dieser Arbeit eine Brücke zwischen Entwicklern und diesem Gesetz zu schlagen. Und natürlich meinen Beitrag dazu zu leisten, Anwendungen für möglichst viele Menschen zugänglich zu machen. 
+Dank der EU wurde eine Richtlinie auf den Weg gebracht, die in Deutschland durch das BFSG vorgeschrieben ist. Doch was bedeuten diese Vorgaben nun für die Entwickler, die sie in ihren Anwendungen umsetzen müssen? Wie bereits erwähnt, ist Barrierefreiheit in Entwicklerkreisen kein populäres Thema. Daher ist es mein Ziel, mit dieser Arbeit eine Brücke zwischen Entwicklern und dem BFSG zu bauen. Ich möchte natürlich meinen Beitrag dazu leisten, Anwendungen für möglichst alle Menschen zugänglich zu machen. 
 
 Was bedeutet das Gesetz für mich? Was muss ich beachten, wenn ich eine neue Anwendung entwickle? Sind diese Anforderungen mit modernen Webtechnologien überhaupt umsetzbar? Diese und andere Fragen versuche ich in meiner Arbeit zu beantworten.
 
@@ -23,13 +27,16 @@ Was bedeutet das Gesetz für mich? Was muss ich beachten, wenn ich eine neue Anw
 Zusammengefasst unter der Thesis Frage:
 \vspace{1em}
 
-\noindent\textbf{\large Wie lassen sich die Anforderungen des Barrierefreiheitsstärkungsgesetzes (BFSG) in einer modernen Webanwendung technisch umsetzen?}
+\begin{tcolorbox}[boxrule=0pt,sharp corners,enhanced,borderline west={2pt}{0pt}{blue}]
+    \textbf{\large Wie lassen sich die Anforderungen des Barrierefreiheitsstärkungsgesetzes (BFSG) in einer modernen Webanwendung technisch umsetzen?}
+\end{tcolorbox}
+
 \vspace{1em}
 
 \section{Mrija Manager}
-Mein Praktikum während des Studiums habe ich bei der Progeek GmbH absolviert. Das Unternehmen wurde unter anderem von Boris Dudelsack gegründet, der in einigen Modulen auch mein Dozent war. So kam der Kontakt zustande. Als ich auf der Suche nach einem Thema für meine Bachelorarbeit war, stand ich in engem Kontakt mit Boris Dudelsack. Zu einem späteren Zeitpunkt kam Boris dann mit einem Projekt auf mich zu, das die Progeek GmbH demnächst starten wird und für das ein Usability- und Accessibility-Konzept benötigt wird.
+Da die Anforderungen später in der Arbeit an einem Prototypen umgesetzt werden, ist es wichtig, ein Projekt zu haben, das diese Anforderungen umsetzt. Daher habe ich mich entschieden, die Anforderungen des BFSG in einem Prototypen umzusetzen, der im Rahmen des Projekts Mrija Manager entwickelt wird.
 
-Das Projekt heißt Mrija Manager und hat zum Ziel, eine benutzerfreundliche und barrierefreie Plattform für die Verwaltung von Veranstaltungen zu entwickeln. Der Mrija Manager ermöglicht es Veranstaltern, ihre Events auf einfache Weise zu präsentieren und den Austausch mit Nutzern zu fördern. Die plattformübergreifende Webanwendung ist auf allen Geräten nutzbar und bietet eine flexible Gestaltung von Veranstaltungen. Vereine können ihre Veranstaltungen als privat, offen, kostenpflichtig oder kostenlos anlegen, um gezielt ein interessiertes Publikum anzusprechen.
+Das Projekt Mrija Manager hat zum Ziel, eine benutzerfreundliche und barrierefreie Plattform für die Verwaltung von Veranstaltungen zu entwickeln. Der Mrija Manager ermöglicht es Veranstaltern, ihre Events auf einfache Weise zu präsentieren und den Austausch mit Nutzern zu fördern. Die plattformübergreifende Webanwendung ist auf allen Geräten nutzbar und bietet eine flexible Gestaltung von Veranstaltungen. Vereine können ihre Veranstaltungen als privat, offen, kostenpflichtig oder kostenlos anlegen, um gezielt ein interessiertes Publikum anzusprechen.
 
 Die Plattform richtet sich an Veranstalter und Interessierte jeder Herkunft und erleichtert die Verwaltung von Anmeldungen und Kontakten. Durch Open Source und Hosting in Deutschland wird ein hohes Maß an Sicherheit und Transparenz gewährleistet.
 
@@ -43,31 +50,25 @@ In dieser Arbeit wird ein systematischer Ansatz verwendet, um eine barrierefreie
 
 Die Grundlage dieser Arbeit bildet eine umfassende Literaturrecherche. Ziel ist es, relevante wissenschaftliche Artikel, technische Dokumentationen und gesetzliche Vorgaben zur digitalen Barrierefreiheit zu analysieren. Dabei werden insbesondere die nationalen Vorgaben aus den Gesetzen BITV 2.0 und BFSG, die den Gesetzen zugrundeliegenden EU-Richtlinien 2016/2102 und 2019/882 sowie die in der Norm EN 301 549 enthaltenen Web Content Accessibility Guidelines (WCAG 2.1) betrachtet.
 
-Die Recherche erfolgt mittels wissenschaftlicher Datenbanken wie Google Scholar, \textcolor{red}{(IEEE Xplore und ACM Digital Library)} sowie durch die Analyse relevanter Web- und Entwicklerdokumentationen. Der Fokus liegt dabei auf den methodischen Grundlagen der Web Accessibility, den technischen Anforderungen und Best Practices für barrierefreie Webanwendungen.
+Die Recherche erfolgt in erster Linie mittels der offiziellen Stellen der jeweiligen Gesetze sowie durch die Analyse relevanter Web- und Entwicklerdokumentationen. Der Fokus liegt dabei auf den methodischen Grundlagen der Web Accessibility, den technischen Anforderungen und Best Practices für barrierefreie Webanwendungen.
 
 \subsection{Fallstudie}
 
-Im Rahmen der Fallstudie werden bestehende Webanwendungen analysiert, um aktuelle Herausforderungen und Defizite in Bezug auf Barrierefreiheit zu identifizieren. Dabei werden verschiedene Websites aus den Bereichen \textcolor{red}{E-Government, E-Commerce, Finanzdienstleistungen und Mobilitätsdienste} betrachtet.
+Im Rahmen der Fallstudie werden bestehende Webanwendungen analysiert, um aktuelle Herausforderungen und Defizite in Bezug auf Barrierefreiheit zu identifizieren. Aber auch positive Beispiele und Umsetzungen werden gesammelt um eine umfassende Sammlung zu erhalten. Dabei werden Websites aus verschiednen Bereichen betrachtet um ein breites Spektrum der Webentwicklung abzudecken.
 
-Die Analyse erfolgt nach einem festgelegten Kriterienkatalog, der sich an den Anforderungen der WCAG 2.1 sowie an gesetzlichen Vorgaben orientiert. Neben automatisierten Tests mit Tools wie Lighthouse und axe werden auch manuelle Tests durchgeführt, um beispielsweise die Tastaturbedienbarkeit und die Screenreader-Kompatibilität zu bewerten. Die Ergebnisse der Fallstudie fließen direkt in die Entwicklung des Prototyps ein.
+Die Analyse erfolgt nach einem festgelegten Kriterienkatalog, der sich an den Anforderungen der WCAG 2.1 sowie an gesetzlichen Vorgaben und die dazugehörigen Normen orientiert. Neben automatisierten Tests mit Tools wie Lighthouse und axe werden auch manuelle Tests durchgeführt, um beispielsweise die Tastaturbedienbarkeit zu bewerten. Auf einen vollumfänglichen manuellen Test wurde bewusst verzichtet. Aus Vorgesprächen mit Experten ging hervor, dass eine Simulation der verschiedenen Behinderungen wenig bis keinen Sinn macht. Der Grund dafür ist, dass die Herangehensweise, die ein Mensch mit einer Behinderung über das Leben hinweg gelernt hat, nicht einfach nachvollzogen oder simuliert werden kann. Ein Mensch ohne Behinderung hat einfach andere Work-Arounds und Herangehensweisen um Probleme zu umgehen, die ein Mensch mit Behinderung nicht hat. 
+
+Die Ergebnisse der Fallstudie fließen direkt in die Entwicklung des Prototyps ein.
 
 \subsection{Prototyping} 
 
-Auf Basis der gewonnenen Erkenntnisse wird ein barrierefreier Prototyp einer React-Anwendung entwickelt. Der Fokus liegt dabei auf der Umsetzung der wesentlichen Anforderungen für digitale Barrierefreiheit, u.a:
-
-Verwendung von ARIA-Attributen zur Verbesserung der Unterstützung von assistiven Technologien, Strukturierung der Inhalte mit semantischem HTML, Sicherstellung einer uneingeschränkten Tastaturbedienbarkeit, Optimierung von Farbkontrasten und visuellen Elementen.
+Auf Basis der gewonnenen Erkenntnisse wird ein barrierefreier Prototyp einer React-Anwendung entwickelt. Der Fokus liegt dabei auf der Umsetzung der wesentlichen Anforderungen für digitale Barrierefreiheit.
 
 Die Entwicklung erfolgt iterativ unter Berücksichtigung der gesetzlichen Vorgaben, der WCAG und der Best Practices für Barrierefreiheit. Das verwendete UI-Framework MUI wird gezielt auf Barrierefreiheit getestet und angepasst.
 
 \subsection{Evaluierung}
 
-Die Evaluierung des entwickelten Prototyps erfolgt anhand definierter Testmethoden. Dabei werden sowohl automatisierte Tests als auch manuelle Überprüfungen durchgeführt:
-
-- Automatisierte Tests: Einsatz von Lighthouse, axe DevTools und WAVE zur Identifikation von Barrieren.
-
-- Manuelle Tests: Überprüfung der Tastaturnavigation, Screenreader-Unterstützung und Kontrastverhältnisse.
-
-- Vergleich mit rechtlichen Anforderungen: Überprüfung, ob die Anwendung den Richtlinien der WCAG 2.1 und EN 301 549 entspricht.
+Die Evaluierung des entwickelten Prototyps erfolgt anhand der gleichen Kriterien wie bei der Fallstudie. Dabei werden sowohl automatisierte Tests mit Tools wie Lighthouse, axe und WAVE als auch manuelle Tests durchgeführt. Außerdem wird ein Vergleich mit rechtlichen Anforderungen gezogen. 
 
 Die Evaluation liefert Erkenntnisse darüber, inwieweit die gesetzlich geforderten Barrierefreiheitsstandards mit React und MUI umgesetzt werden können und wo Optimierungspotenzial besteht. Diese Ergebnisse fließen in die abschließende Diskussion der Arbeit ein.
 
