@@ -27,7 +27,7 @@ WCAG-Kriterium	Name	Beschreibung	Fehleranzahl_axe	Fehleranzahl_WAVE
 9.2.2.1	Zeit anpassbar	Können zeitabhängige Inhalte pausiert oder verlängert werden?		
 9.2.2.2	Pausieren, stoppen, ausblenden	Gibt es Kontrollmöglichkeiten für bewegte Inhalte?		
 9.2.3.1	Flackergrenzen	Flackert kein Inhalt mit mehr als 3 Mal pro Sekunde?		
-9.2.4.1	Blockumgehung	Gibt es eine Möglichkeit, Navigation zu überspringen?		
+9.2.4.1	Blockumgehung	Gibt es eine Möglichkeit, Navigation zu überspringen?	3	3
 9.2.4.2	Titel der Seite	Ist der Seitentitel aussagekräftig?		
 9.2.4.3	Fokusreihenfolge	Bewegen sich Nutzer in einer sinnvollen Reihenfolge durch die Seite?		
 9.2.4.4	Linkzweck (im Kontext)	Ist der Zweck von Links verständlich?	70	74

@@ -628,3 +628,99 @@ In der Summe sind einige Fehler aufgetreten. Im Verglich zu Eventim sind die Feh
 \end{tikzpicture}
 \caption{Auswertung Analyse myticket}
 \end{figure}
+
+\section{Ableitung von Optimierungsmaßnahmen}
+
+Die Analyse der Webseiten hat viel Aufschluss über die Barrierefreiheit der Seiten gegeben. Aus diesen Fehlern aber auch Postivbeispielen, die in diesem Kapitel unter anderem behandelt werden, lassen sich Optimierungsmaßnahmen ableiten, die wiederum in den Prototypen mit einfließen werden.
+
+\subsection{Fehlerverteilung}
+Die Analyse der Webseiten hat gezeigt, dass es viele Fehler gibt, die sich wiederholen. Dabei sind die Fehler nicht nur auf eine Seite beschränkt, sondern ziehen sich durch alle Seiten. Das bedeutet, dass die Fehler nicht nur einmal behoben werden müssen, sondern auf jeder Seite. Dabei sind aber auch einige Fehler, die in Elementen, wie der Navigation, auftreten. Diese Elemente sind auf jeder Seite vorhanden und müssen damit auch auf jeder Seite angepasst werden.
+
+Betrachtet man die Ergebnisse der gesamten Analyse, so fällt auf, dass die Kategorie der 9.1 Wahrnehmbarkeit am häufigsten verletzt wurde (Abbildung 4.49). Um es konkreter zu machen, das Kriterium 1.4.3 'Mindestkontrast' (Abbildung 4.50). Dabei machen aber Otto und Eventim den Großteil der Fehler aus. 
+
+9.2 'Bedienbarkeit' ist die zweite Kategorie, die am häufigsten verletzt wurde (Abbildung 4.49). Kriterium 2.4.7 "Fokus sichtbar" sticht hier hervor. Auch hier ist der Großteil der Fehler bei Otto aufgetreten, aber auch bei eventim.
+
+Auch hervorzuheben ist die Kategorie 9.4.1.2 'Name, Rolle, Wert' (Abbildung 4.50). Dieses Kriterium wurde allerdings im Gegensatz zu den vorher genannten Kriterien von vielen Seiten verletzt. Dabei sind die Fehler bei den meisten Seiten eher gering, aber die Anzahl der Seiten, die das Kriterium nicht einhalten, ist hoch.
+
+Bei dieser Statistik ist zu beachten, dass es nicht um die Anzahl der Fehler geht, sondern um die Anzahl der Seiten, die das Kriterium nicht einhalten. Denn selbst eine geringe Anzahl an Fehlern, ist eine Barriere, die für einige Gruppen nicht überwunden werden können. Und wenn in in einem Buchungsprozess schon ein Kriterium nicht eingehalten wird und der Nutzer nicht weiter kommt, kann der gesamte Prozess nicht abgeschlossen werden. Somit kann ein einzelner Fehler schon dafür sorgen, dass Menschen nicht in der Form teilhaben können, wie es durch die Barrierefreiheit eigentlich möglich sein sollte.
+
+\begin{figure}[H]
+\begin{tikzpicture}
+\begin{axis}[
+    width=\textwidth,
+    height=10cm,
+    ybar,
+    bar width=12pt,
+    xlabel={WCAG-Kriterium},
+    ylabel={Fehleranzahl},
+    symbolic x coords={ 9.1, 9.2, 9.3, 9.4 },
+    xtick=data,
+    x tick label style={rotate=45, anchor=east},
+    ymin=0,
+    ymax=1000,
+    enlarge x limits=0.1,
+    legend style={cells={anchor=west}, legend pos=north east},
+    nodes near coords,
+    nodes near coords style={font=\scriptsize},
+]
+\addplot table[x=WCAG-Kriterium,y=Fehleranzahl_axe,col sep=tab] {csv/output/wcag_analyse_Summary_xx.csv};
+\addplot table[x=WCAG-Kriterium,y=Fehleranzahl_WAVE,col sep=tab] {csv/output/wcag_analyse_Summary_xx.csv};
+\legend{axe,WAVE}
+\end{axis}
+\end{tikzpicture}
+\caption{Auswertung Analyse Summary}
+\end{figure}
+
+\begin{figure}[H]
+\begin{tikzpicture}
+\begin{axis}[
+    width=\textwidth,
+    height=10cm,
+    ybar,
+    bar width=12pt,
+    xlabel={WCAG-Kriterium},
+    ylabel={Fehleranzahl},
+    symbolic x coords={ 9.1.1.1, 9.1.3.1, 9.1.4.1, 9.1.4.3, 9.1.4.4, 9.2.1.1, 9.2.4.1, 9.2.4.4, 9.2.4.6, 9.2.4.7, 9.3.3.2, 9.4.1.2 },
+    xtick=data,
+    x tick label style={rotate=45, anchor=east},
+    ymin=0,
+    ymax=600,
+    enlarge x limits=0.1,
+    legend style={cells={anchor=west}, legend pos=north east},
+    nodes near coords,
+    nodes near coords style={font=\scriptsize},
+]
+\addplot table[x=WCAG-Kriterium,y=Fehleranzahl_axe,col sep=tab] {csv/output/wcag_analyse_Summary_xxxx.csv};
+\addplot table[x=WCAG-Kriterium,y=Fehleranzahl_WAVE,col sep=tab] {csv/output/wcag_analyse_Summary_xxxx.csv};
+\legend{axe,WAVE}
+\end{axis}
+\end{tikzpicture}
+\caption{Auswertung Analyse Summary}
+\end{figure}
+
+\subsection{Positivbeispiele}
+Bei der Analyse der Webseiten wurden aber nicht auf die Nichteinhaltung der Kriterien geachtet, sondern speziell auch auf Umsetzungen, die man positiv einsetzen kann. Dabei sind einige Beispiele aufgetaucht, die in dem Prototypen umgesetzt werden.
+
+Obwohl fast die Hälfte der Seiten keine Skip Links hatten, mit denen man direkt zum Inhalt der Seite springen kann, gibt es einige gute Beispiele für die Umsetzung des Kriteriums 2.4.1 "Blockumgehung". Dabei ist es wichtig, dass der Skip Link auch sichtbar ist, wenn man die Seite mit der Tastatur bedient.
+
+Amazon hat eine gute Umsetzung, da der Skip Link nicht nur sichtbar ist, sondern es wird eine Schaltfläche angezeigt, die neben dem Link zum Hauptinhalt noch weitere Tastenkombinationen und Hinweise bietet (Abbildung 4.51).
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{img/good/amazon_good_shortcut-examples.png}
+    \caption{Gute Umsetzung des Skip Links bei Amazon}
+\end{figure}
+
+
+Über den nicht eingehaltenen Mindestkontrast auf der Seite von hvv wurde bereits berichtet (Abbildung 4.14). Als Alternative bietet der hvv aber eine weiter Version der Seite an, die einen höheren Kontrast einhält (Abbildung 4.52). Die Seite ist dann voll und ganz in schwarz weiß gehalten und Die Bilder sind ausgeblendet. Damit ist ein ausreichender Mindestkontrast gegeben. Der Button zum umschalten ist auch extra mit dem ARIA-Label "Kontrastversion" versehen, damit auch Screenreader-Nutzer wissen, was passiert, wenn sie den Button klicken. Damit ist das Kriterium 1.4.3 "Mindestkontrast" in dem Modus eingehalten.
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{img/good/hvv_good-contrast-theme.png}
+    \caption{Gute Umsetzung des Kontrastmodus beim hvv}
+\end{figure}
+
+Sehr positiv war das navigieren mit der Tastatur auf der Seite vom VBB durch die Navigation. Die Untermenüpunkte werden sichtbar, wenn man mit der Tastatur über den Menüpunkt fährt. Dabei wird der Fokus auf den Untermenüpunkten gesetzt und die Untermenüpunkte sind auch mit der Tastatur erreichbar. Das ist eine gute Umsetzung des Kriteriums 2.4.1 "Blockumgehung".
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{img/good/vbb_good-nav-tab.png}
+    \caption{Sichtbares Untermenü bei der Bedienung mit der Tastatur durch die Navigation beim VBB}
+\end{figure}

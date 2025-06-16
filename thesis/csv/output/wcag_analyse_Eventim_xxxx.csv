@@ -1,5 +1,6 @@
 WCAG-Kriterium	Name	Beschreibung	Fehleranzahl_axe	Fehleranzahl_WAVE
 9.1.3.1	Info und Beziehungen	Sind semantische HTML-Strukturen vorhanden?	0	1
 9.1.4.3	Mindestkontrast	Sind die Farbkontraste ausreichend?	262	296
+9.2.4.1	Blockumgehung	Gibt es eine Möglichkeit, Navigation zu überspringen?	3	3
 9.2.4.4	Linkzweck (im Kontext)	Ist der Zweck von Links verständlich?	3	3
 9.4.1.2	Name, Rolle, Wert	Haben UI-Elemente korrekte ARIA-Attribute?	7	1
