@@ -42,3 +42,5 @@
 # Sonstige temporäre Verzeichnisse
 _build/
 build/
+
+_minted/
