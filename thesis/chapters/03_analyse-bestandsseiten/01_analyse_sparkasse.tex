@@ -2,14 +2,14 @@
 \subsection{Analyse Sparkasse}
 Die Sparkasse hat in der Entwicklung ihrer Startseite auch React und MUI verwendet. Deshalb ist eine Betrachtung dieser Seite besonders wertvoll. 
 
-Die Startseite weist eine geringe Anzahl an Fehlern auf. Ein Fehler tritt aber wiederholt auf. Dabei handelt es sich um einen Verstoß gegen Kriterium 1.3.1 "Info und Beziehungen". Konkret werden Listenelemente \lstinline{<li>} nicht korrekt in einer Liste \lstinline{<ul>} oder \lstinline{<ol>} verwendet. Dabei ist das HTML-Element mit \lstinline{<li>} richtig angelegt aber als role wurde article verwendet. Somit wird die Liste nicht korrekt interpretiert.
+Die Startseite weist eine geringe Anzahl an Fehlern auf. Ein Fehler tritt aber wiederholt auf. Dabei handelt es sich um einen Verstoß gegen Kriterium 1.3.1 "Info und Beziehungen". Konkret werden Listenelemente \lstinline{<li>} nicht korrekt in einer Liste \lstinline{<ul>} oder \lstinline{<ol>} verwendet. Dabei ist das HTML-Element mit \lstinline{<li>} richtig angelegt, aber als role wurde article verwendet. Somit wird die Liste nicht korrekt interpretiert.
 
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{img/sparkasse_ul-li-wrong-role.png}
     \caption{Fehlerhafte Verwendung von Listen-Elementen}
 \end{figure}
 
-Manche Fehler betreffen auch gleich mehrere Regeln, so wurde von WAVE festgestellt, dass es kein Label bei einem Suchfeld gibt. Dies Verstößt gleich gegen 4 WCAG-Kriterien 1.1.1 "Nicht-Text-Inhalt", 1.3.1 "Info und Beziehungen", 2.4.6 "Überschriften und Beschriftungen" und 3.3.2 "Labels oder Anleitungen".
+Manche Fehler betreffen auch gleich mehrere Regeln. So wurde von WAVE festgestellt, dass es kein Label bei einem Suchfeld gibt. Dies verstößt gleich gegen 4 WCAG-Kriterien 1.1.1 "Nicht-Text-Inhalt", 1.3.1 "Info und Beziehungen", 2.4.6 "Überschriften und Beschriftungen" und 3.3.2 "Labels oder Anleitungen".
 
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{img/sparkasse_no-label.png}
