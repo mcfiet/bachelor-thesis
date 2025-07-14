@@ -1,12 +1,12 @@
 
 \subsection{Analyse Amazon}
-Auf der Startseite wurden wenig Fehler gefunden. Einer der häufigsten Fehler aber war auch hier fehlende Labels bei einigen Elementen. Zum Beispiel auch beim Logo, wo der Link keinen beschriebenen Text hat. Das ist ein Verstoß gegen Kriterium 4.1.2 "Name, Rolle, Wert".
+Auf der Startseite wurden wenig Fehler gefunden. Einer der häufigsten Fehler aber war auch hier fehlende Labels bei einigen Elementen. Zum Beispiel auch beim Logo, wo der Link keinen beschriebenen Text hat. Das ist ein Verstoß gegen Kriterium 4.1.2 \enquote{Name, Rolle, Wert}.
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{img/amazon_no-label.png}
     \caption{Fehlendes Label bei einem Link}
 \end{figure}
 
-Zusätzlich wurden noch die Produktseiten untersucht. Dabei wurde festgestellt, dass Links (Abbildung 4.31) und Buttons (Abbildung 4.32) keinen zugänglichen Namen haben. Das ist ein Verstoß gegen Kriterium 4.1.2 "Name, Rolle, Wert". Ein Button davon ist ein Bild, bei dem auch kein alternativer Text angegeben ist (Abbildung 4.33). Das ist ein Verstoß gegen Kriterium 1.1.1 "Nicht-Text-Inhalt".
+Zusätzlich wurden noch die Produktseiten untersucht. Dabei wurde festgestellt, dass Links (Abbildung 4.31) und Buttons (Abbildung 4.32) keinen zugänglichen Namen haben. Das ist ein Verstoß gegen Kriterium 4.1.2 \enquote{Name, Rolle, Wert}. Ein Button davon ist ein Bild, bei dem auch kein alternativer Text angegeben ist (Abbildung 4.33). Das ist ein Verstoß gegen Kriterium 1.1.1 \enquote{Nicht-Text-Inhalt}.
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{img/amazon_link-no-accessible-text.png}
     \caption{Fehlendes Label bei einem Link}
@@ -20,7 +20,7 @@ Zusätzlich wurden noch die Produktseiten untersucht. Dabei wurde festgestellt, 
     \caption{Fehlender alternativer Text bei einem Bild}
 \end{figure}
 
-Die Fehler wiederholen sich natürlich auch auf den anderen Produktseiten. Auffallend ist, dass, obwohl sehr viele Bilder auf der Seite sind, nur sehr wenige Fehler bei den Bildern auftreten. Das liegt daran, dass die Bilder in der Regel mit einem alternativen Text versehen sind. Hier lässt sich auch sehr gut der Unterschied der beiden verwendeten Tools AXE und WAVE feststellen. Während AXE keine Fehler bei den alternativen Texten von Bildern feststellt, zeigt WAVE Fehler an. Grundlegend sind diese Fehler auch richtig, allerdings handelt es sich hier um die Miniaturvorschauen auf der Produktseite. Diese sind mit einem ARIA "hidden=true" ausgestattet, was bedeutet, dass diese Elemente nicht berücksichtigt werden. Damit man die Bilder trotzdem mit Screenreadern warhnehmen kann, sind alle Bilder in der großen Vorschau als Liste angelegt und nur mit CSS ausgeblendet, je nachdem welches ausgwählt ist. 
+Die Fehler wiederholen sich natürlich auch auf den anderen Produktseiten. Auffallend ist, dass, obwohl sehr viele Bilder auf der Seite sind, nur sehr wenige Fehler bei den Bildern auftreten. Das liegt daran, dass die Bilder in der Regel mit einem alternativen Text versehen sind. Hier lässt sich auch sehr gut der Unterschied der beiden verwendeten Tools AXE und WAVE feststellen. Während AXE keine Fehler bei den alternativen Texten von Bildern feststellt, zeigt WAVE Fehler an. Grundlegend sind diese Fehler auch richtig, allerdings handelt es sich hier um die Miniaturvorschauen auf der Produktseite. Diese sind mit einem ARIA \codeinline{hidden=true} ausgestattet, was bedeutet, dass diese Elemente nicht berücksichtigt werden. Damit man die Bilder trotzdem mit Screenreadern warhnehmen kann, sind alle Bilder in der großen Vorschau als Liste angelegt und nur mit CSS ausgeblendet, je nachdem welches ausgwählt ist. 
 
 \begin{figure}[H]
     \includegraphics[width=\textwidth]{img/amazon_mini-image-no-alt-text.png}
@@ -32,7 +32,7 @@ Die Fehler wiederholen sich natürlich auch auf den anderen Produktseiten. Auffa
     \caption{Großes Vorschaubild mit alternativem Text in der Liste}
 \end{figure}
 
-In der Statistik ist der Unterschied zwischen den beiden Tools sehr gut zu erkennen. In dem Kriterium 1.1.1 \enquote{Nicht-Text-Inhalt} gibt es den größten Unterschied. In diesem Fall liegt AXE aber richtig, da der Fehler mit dem alternativen Text durch das ARIA "hidden=true" nicht mehr relevant ist.
+In der Statistik ist der Unterschied zwischen den beiden Tools sehr gut zu erkennen. In dem Kriterium 1.1.1 \enquote{Nicht-Text-Inhalt} gibt es den größten Unterschied. In diesem Fall liegt AXE aber richtig, da der Fehler mit dem alternativen Text durch das ARIA \codeinline{hidden=true} nicht mehr relevant ist.
 
 \begin{figure}[H]
 \begin{tikzpicture}
