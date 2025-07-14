@@ -16,10 +16,11 @@ Im Vergleich dazu steht die Abbildung 4.5 der Login-Seite, in der kein Label meh
     \caption{Social Media Icons ohne Label}
 \end{figure}
 
-Zusätzlich wurde das Scaling mit user-scalable=no ausgeschaltet. Zu sehen in Abbildung 4.6.
+Zusätzlich wurde das Scaling mit \codeinline{user-scalable=no} ausgeschaltet. Zu sehen in Abbildung 4.6.
 
 \begin{figure}[H]
-\begin{lstlisting}[language=html]
+\begin{minted}[linenos, bgcolor=gray!10]{HTML}
+export default function SearchPageWrapper() {
 <meta name="viewport" 
     content="width=device-width,
     initial-scale=1,
@@ -27,7 +28,7 @@ Zusätzlich wurde das Scaling mit user-scalable=no ausgeschaltet. Zu sehen in Ab
     minimum-scale=1,
     user-scalable=no"
     >
-\end{lstlisting}
+\end{minted}
 \caption{Scaling mit user-scalable=no}
 \end{figure}
 
