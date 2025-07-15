@@ -1,0 +1,30 @@
+\section{Zusammenfassung der Ergebnisse}
+Im Rahmen dieser Arbeit wurde mithilfe einer Literaturrecherche eine Basis an Wissen zum Barrierefreiheitsstärkungsgesetz geschaffen. Dabei wurde insbesondere der Zusammenhang zwischen dem Barrierefreiheitsstärkungsgesetz (BFSG), der EU Richtlinie 2019/882 sowie den internationalen Richtlinien wie den WCAG 2.1 analysiert. Ziel war es, ein solides Verständnis für die rechtlichen und normativen Anforderungen zu schaffen, die als Grundlage für die praktische Umsetzung dienen.
+
+Danach erfolgte die Analyse der Bestandsseiten um einen Status quo in der aktuellen Entwicklung zu erhalten. Zuerst wurden die vom Gesetz betroffenen Kategorien und dann dazu passende Anbieter zum Analysieren herausgearbeitet.
+
+Auf Basis der rechtlichen Vorgaben und Analyseergebnisse wurde ein barrierefreies Anwendungskonzept erstellt. Es wurde besonderer Wert auf klare Seitenstrukturen, konsistente Benutzerführung und visuelle sowie funktionale Zugänglichkeit gelegt. Ein klickbarer Figma-Prototyp unterstützte die Visualisierung und Abstimmung.
+
+Die Umsetzung erfolgte mit React (Next.js) und Material UI (MUI). Der Fokus lag hierbei auf die Umsetzung der Barrierefreiheit mit diesen Tools. Denn MUI nimmt als UI-Bibliothek einiges an Arbeit ab. Dennoch liegt genau darin der Nachteil, denn wenn Komponenten nicht den Anforderungen entsprechen wird es teilweise schwierig oder aufwändiger die Komponenten dahingehend anzupassen. Es hat sich auch gezeigt, dass externe Bibliotheken, wie in diesem Fall \codeinline{notistack} für die Statusmeldungen, auf Barrierefreiheit geprüft werden müssen.
+
+\section{Kritik}
+
+Progressive Enhancement: Die aktuelle Implementierung setzt auf moderne JavaScript-Frameworks. Eine barriereärmere Architektur wäre möglich, wenn Inhalte auch ohne JavaScript zugänglich wären (Content-First-Ansatz). Die konsequente Anwendung von Progressive Enhancement könnte die Robustheit der Anwendung erhöhen und Nutzbarkeit auf breiterer technischer Basis ermöglichen.
+
+Erfüllung aller WCAG AAA-Kriterien: Auch wenn die Anforderungen aus der Norm (Level AA) erfüllt wurden, wurden die höchsten WCAG-Levels (AAA) in dieser Arbeit nur teilweise umgesetzt. Damit entspricht die Anwendung den gesetzlichen Anforderungen und erfüllt damit den Zweck dieser Arbeit, dennoch sollte das Ziel immer sein, Barrierefreiheit weiter auszubauen.
+
+\section{Ausblick}
+Ein nächster sinnvoller Schritt wäre es, Tests mit echten Nutzern mit Behinderungen durchzuführen. Diese könnten nicht nur die Ergebnisse der automatisierten überprüfen, sondern auch neue, nicht-technische Barrieren identifizieren, die in dieser Arbeit möglicherweise übersehen wurden. Dadurch ließe sich die Praxistauglichkeit der Anwendung nochmals verbessern und die Aussagekraft der Analyse signifikant erhöhen.
+
+Zudem könnten weiterführende Arbeiten die Barrierefreiheit im realen Nutzungskontext untersuchen, etwa durch User-Tests oder Langzeitbeobachtungen. Wie schon erwähnt ging aus den Vorgesprächen mit den Verbänden hervor, dass sich eine Behinderung nicht einfach simulieren lässt.  Auch eine Weiterentwicklung hin zu einer vollständigen Umsetzung aller AAA-Kriterien würde das Projekt langfristig auf ein noch inklusiveres Niveau heben.
+
+\section{Fazit}
+Die technische Umsetzung barrierefreier Webanwendungen im Rahmen des BFSG zeigt, dass viele Anforderungen durch moderne Technologien wie React und UI-Bibliotheken wie MUI bereits gut unterstützt werden. Dennoch wurde im Laufe der Entwicklung deutlich: Es sind weniger die Werkzeuge oder Frameworks, die grundlegend verändert werden müssen, sondern vielmehr die Denkweise, mit der Webentwicklung betrieben wird.
+
+Barrierefreiheit darf nicht als nachträglicher Zusatz oder als einmalig zu erfüllende Liste technischer Kriterien verstanden werden. Vielmehr muss sie von Anfang an mitgedacht werden - im Design, in der Konzeption, in der Programmierung und im Testing. Besonders letzteres erfordert neue Denkweisen, die außerhalb der eigenen Erfahrungswelt liegen. So wurde in Vorgesprächen deutlich, dass Entwickler die Lebensrealitäten von Menschen mit Behinderungen nicht vollständig simulieren können. Selbst nicht mit guten Tools oder Screenreadern. Daher ist es essenziell, betroffene Personen aktiv in den Entwicklungs- und Testprozess einzubeziehen.
+
+Ein zentrales Learning dieser Arbeit ist, dass Barrierefreiheit kein Zustand, sondern ein Prozess ist. Es gibt nicht \enquote{die perfekte} barrierefreie Anwendung. Barrierefreiheit ist eine Annäherung an ein Ideal, also eine kontinuierliche Optimierung. Selbst wenn alle gesetzlichen Vorgaben erfüllt sind, bleibt immer Spielraum für Verbesserungen: bessere Kontraste, verständlichere Sprache, klarere Fokusführung, oder eine inklusivere Informationsarchitektur.
+
+Diese Perspektive ist besonders im Hinblick auf die gesellschaftliche Relevanz von Barrierefreiheit wichtig: Sie nützt nicht nur Menschen mit Behinderungen, sondern verbessert die Benutzerfreundlichkeit für alle - etwa durch bessere Strukturierung, klarere Interaktion oder responsives Design.
+
+Abschließend lässt sich festhalten: Barrierefreiheit beginnt nicht im Code, sondern im Bewusstsein der Menschen, die diesen Code schreiben. Wer barrierefreie Anwendungen entwickeln will, muss bereit sein, Fragen zu stellen, zuzuhören und zu lernen. Und das immer wieder.
