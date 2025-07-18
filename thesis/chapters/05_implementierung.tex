@@ -3,7 +3,7 @@ Allerdings werden nicht alle WCAG Regeln aufgelistet und erklärt, da es erstens
 Die offiziellen WCAG-Richtlinien sind auf der \href{https://www.w3.org/TR/WCAG21/}{Website}\footnote{\url{https://www.w3.org/TR/WCAG21/}} verfügbar.
 
 Die Implementierung des Prototyps ist als Website online zur Verfügung gestellt worden und ist auf dieser \href{https://eventa11y.devoniq.de}{Website}{\footnote{\url{https://eventa11y.devoniq.de}}} verfügbar.
-Zusätzlich sind die einzelnen Seiten im Anhang zu finden.
+Zusätzlich sind die einzelnen Seitenansichten (Desktop und Mobil) und Links im Anhang zu finden.
 
 \section{Struktur und semantische Grundlagen}
 Eine der grundlegenen Dinge, die erfüllt sein sollten, ist, die semantische Strukur der Seite korrekt abzubilden. Dabei wurde bewusst auf eine semantisch saubere Auszeichnung geachtet. So wurden zum Beispiel ausschließlich \codeinline{<h1>} bis \codeinline{<h6>} verwendet. Auf dekorative Textelemente, wie \enquote{Pseudo-Headings}, bei denen z.B. semantisch normaler Paragraph-Text als Überschrift gestaltet wird, wurde verzichtet.
@@ -36,7 +36,9 @@ Grundlegend - aber trotzdem wichtig: Auch das Attribut \codeinline{lang=de} wurd
 
 \section{Navigationskonzept und Header}
 
-Um eine konsistente Navigation zu bieten, wurde die Komponente der Navigation im Base-Layout fest integriert. So ist diese auf jeder Seite gleich strukturiert und erfüllt 3.2.3 Consistent Navigation. Die Navigation ist einer der aufwendigsten Komponenten, da es eine deutlich andere Darstellung im mobilen, als im Desktop erfordert. So werden die Menüpunkte in der mobilen Ansicht nicht mehr angezeigt, sondern können über einen Toggle Button sichtbar gemacht werden. Hierbei wurde darauf geachtet, dass das Menü auch mit \codeinline{display: none} wirklich ausgeblendet ist, sodass es im DOM nicht erscheint. Das hat den Vorteil, dass es dadurch nicht im Fokus Fluss aufrufbar ist, solange man es nicht über den Toggle Button einblendet. So muss man z.B. mit der Tastatur nicht durch jeden Menüpunkt einzeln navigieren, um an sein Zeil zu gelangen. 
+Um eine konsistente Navigation zu bieten, wurde die Komponente der Navigation im Base-Layout fest integriert. So ist diese auf jeder Seite gleich strukturiert und erfüllt 3.2.3 Consistent Navigation. 
+
+Die Navigation ist einer der aufwendigsten Komponenten, da es eine deutlich andere Darstellung im mobilen (siehe Abbildung~\ref{fig:PageHomepageMobile} im Anhang), als im Desktop erfordert (siehe Abbildung~\ref{fig:PageHomepage} im Anhang). So werden die Menüpunkte in der mobilen Ansicht nicht mehr angezeigt, sondern können über einen Toggle Button sichtbar gemacht werden. Hierbei wurde darauf geachtet, dass das Menü auch mit \codeinline{display: none} wirklich ausgeblendet ist, sodass es im DOM nicht erscheint. Das hat den Vorteil, dass es dadurch nicht im Fokus Fluss aufrufbar ist, solange man es nicht über den Toggle Button einblendet. So muss man z.B. mit der Tastatur nicht durch jeden Menüpunkt einzeln navigieren, um an sein Zeil zu gelangen. 
 
 Da es sich bei dem Toggle Button um einen Button handelt, der das Menü auf- und zuklappt, wurden auch ARIA-Attribute verwendet, um den aktuellen State anzuzeigen. Im initialen State wird der Button mit ARIA \codeinline{aria-label="Menü öffnen"} und \codeinline{aria-expanded="false"} beschrieben. Sobald man mit dem Button das Menü aktiviert, ändern sich diese Attribute auf \codeinline{aria-label="Menü schließen"} und \codeinline{aria-expanded="true"}. Dies ist auch ein gutes Beispiel dafür, dass ARIA wirklich nur als Erweiterung von HTML gesehen werden sollte. Alles das, was HTML nativ zur Verfügung stellt, sollte auch genutzt werden. Darüber hinaus müssen dann z.B. State Änderungen im Menü mit ARIA umgesetzt werden, damit man Usern, die darauf angewiesen sind, diese Information auch mitteilen kann.
 
@@ -76,9 +78,11 @@ Sollte eine fehlerhafte oder gar keine Eingabe erfolgt sein, die aber als erford
     \caption{Form Errors mit Helfer Texten in schwarz-weiß}
 \end{figure}
 
+Damit die Screenreader die Helfer Texte auch interpretieren können, werden wieder ARIA-Attribute verwendet. So bekommt das Inputfeld selber das Attribut \codeinline{aria-describedby=\enquote{helper-id}}. Der Helfer Text dann die entsprechende \codeinline{id=\enquote{helper-id}}. Somit sind die Helfer Texte dem InputFeld zugewiesen als Beschreibung und werden vorgelesen, wenn man das Input Feld fokussiert. So schlägt es MUI auch in seiner Dokumentation vor als Best Practice \parencite[vgl.][]{mui_helper-text_nodate}.
+
 Zusätzlich wird das Input Feld auch wieder mit ARIA beschrieben. \codeinline{aria-invalid="true"} zeigt dem User, ob die Input Eingabe valide ist oder nicht. 
 
-Im Kontaktformular wurde auch das Input Attribut \codeinline{autocomplete} verwendet. Damit kann angegeben werden, ob und welche Berechtigung der User-Agent (z.B. der Browser) hat, automatische Hilfe beim Ausfüllen von Formularfeldern zu leisten. Es wird auch beschrieben, welche Art von Information von dem Feld erwartet werden. Dafür wird aus einem festgelegtem Set an Optionen ausgewählt.
+Im Kontaktformular siehe (siehe Abbildung~\ref{fig:PageContact} im Anhang) wurde auch das Input Attribut \codeinline{autocomplete} verwendet. Damit kann angegeben werden, ob und welche Berechtigung der User-Agent (z.B. der Browser) hat, automatische Hilfe beim Ausfüllen von Formularfeldern zu leisten. Es wird auch beschrieben, welche Art von Information von dem Feld erwartet werden. Dafür wird aus einem festgelegtem Set an Optionen ausgewählt.
 
 \begin{figure}[H]
 \begin{minted}[linenos, bgcolor=gray!10]{tsx}
@@ -95,15 +99,15 @@ Im Kontaktformular wurde auch das Input Attribut \codeinline{autocomplete} verwe
 \end{figure}
 
 \section{Fehlervermeidung und Bestätigung}
-Vor dem finalen Absenden eines Buchungsprozesses gibt es eine Übersichtsseite, um Eingaben zu überprüfen. Dies unterstützt 3.3.4 Error Prevention (Legal, Financial, Data). Kontextänderungen durch Fokus oder Eingabe wurden bewusst vermieden (3.2.1 On Focus, 3.2.2 On Input). Das heißt, dass sich die Seite um das Feld nicht insoweit verändert, dass der Kontext nicht mehr verstanden wird.
+Vor dem finalen Absenden eines Buchungsprozesses gibt es eine Übersichtsseite, um Eingaben zu überprüfen (siehe Abbildung~\ref{fig:PageEventBookingReview} im Anhang). Dies unterstützt 3.3.4 Error Prevention (Legal, Financial, Data). Kontextänderungen durch Fokus oder Eingabe wurden bewusst vermieden (3.2.1 On Focus, 3.2.2 On Input). Das heißt, dass sich die Seite um das Feld nicht insoweit verändert, dass der Kontext nicht mehr verstanden wird.
 
 \section{Statusmeldungen und Snackbar-Komponenten}
-Benutzer werden bei Statusmeldungen wie etwa beim Absenden eines Formulars, visuell und auditiv (von Screenreadern) informiert. Die Snackbar-Komponente von notistack verwendet die \codeinline{role=\enquote{alert}}. Zusätzlich wurde individuell ein Schließen Button eingefügt. Dadurch wird zum einen gewährleistet, dass Screenreader die Statusmeldung gleich vorliest \parencite[vgl.][]{mdn_role-alert_nodate}, wenn sie erscheint und zum anderen der User die Möglichkeit hat, die Statusmeldung auch wegzuklicken. Letzteres gibt Kriterium 2.2.1 Timing Adjustable Turn off vor. Dafür wurde auch die Zeit, bis die Statusmeldung schließt, sehr hoch eingestellt. Damit bleibt genug Zeit, das Feedback zur Kenntnis zu nehmen.
+Benutzer werden bei Statusmeldungen wie etwa beim Absenden eines Formulars, visuell und auditiv (von Screenreadern) informiert (siehe Abbildung~\ref{fig:PageEventBookingConfirmation} im Anhang). Die Snackbar-Komponente von notistack verwendet die \codeinline{role=\enquote{alert}}. Zusätzlich wurde individuell ein Schließen Button eingefügt. Dadurch wird zum einen gewährleistet, dass Screenreader die Statusmeldung gleich vorliest \parencite[vgl.][]{mdn_role-alert_nodate}, wenn sie erscheint und zum anderen der User die Möglichkeit hat, die Statusmeldung auch wegzuklicken. Letzteres gibt Kriterium 2.2.1 Timing Adjustable Turn off vor. Dafür wurde auch die Zeit, bis die Statusmeldung schließt, sehr hoch eingestellt. Damit bleibt genug Zeit, das Feedback zur Kenntnis zu nehmen.
 
 Die Snackbar von notistack war allerdings noch nicht barrierefrei und musste noch einmal in der Schriftgröße und Schriftdicke angepasst werden, um dem Kriterium 1.4.3 Contrast (Minimum) gerecht zu werden.
 
 \section{FAQ-Bereich}
-Wie schon in der Konzeption beschrieben, wurde auch ein FAQ-Bereich angelegt, um die Konzepte der Barrierefreiheit aufzuzeigen. Dieser wurde mithilfe von Accordion-Elementen umgesetzt. Die Accordion-Elemente haben eine Überschrift (Zusammenfassung) und einen ausführlicheren Text, der sich aufklappen lässt. MUI bietet hier eine fertige Komponente, die man verwenden kann. Zusätzlich zeigt MUI, wie bei anderen Komponenten auch, dass es noch einige Optionen gibt, um die Barrierefreiheit zu stärken. So kann man nach den Vorgaben der W3C \parencite[vgl.][]{w3c_accordion-pattern_nodate} eine \codeinline{id} und \codeinline{aria-controls} verwenden. MUI verwendet dieses dann in der Komponente \parencite[vgl.][]{mui_accordion_nodate}. Das ist für Screenreader sehr wichtig. Damit wird in der Zusammenfassung festgelegt, welchen Content sie labelt. Und andersherum steht im Content, welche Zusammenfassung er beschreibt.
+Wie schon in der Konzeption beschrieben, wurde auch ein FAQ-Bereich angelegt, um die Konzepte der Barrierefreiheit aufzuzeigen (siehe Abbildung~\ref{fig:PageFAQ} im Anhang). Dieser wurde mithilfe von Accordion-Elementen umgesetzt. Die Accordion-Elemente haben eine Überschrift (Zusammenfassung) und einen ausführlicheren Text, der sich aufklappen lässt. MUI bietet hier eine fertige Komponente, die man verwenden kann. Zusätzlich zeigt MUI, wie bei anderen Komponenten auch, dass es noch einige Optionen gibt, um die Barrierefreiheit zu stärken. So kann man nach den Vorgaben der W3C \parencite[vgl.][]{w3c_accordion-pattern_nodate} eine \codeinline{id} und \codeinline{aria-controls} verwenden. MUI verwendet dieses dann in der Komponente \parencite[vgl.][]{mui_accordion_nodate}. Das ist für Screenreader sehr wichtig. Damit wird in der Zusammenfassung festgelegt, welchen Content sie labelt. Und andersherum steht im Content, welche Zusammenfassung er beschreibt.
 
 \begin{figure}[H]
 \begin{minted}[linenos, bgcolor=gray!10]{tsx}
