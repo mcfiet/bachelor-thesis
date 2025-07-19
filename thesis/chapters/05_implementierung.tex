@@ -78,7 +78,7 @@ Sollte eine fehlerhafte oder gar keine Eingabe erfolgt sein, die aber als erford
     \caption{Form Errors mit Helfer Texten in schwarz-weiß}
 \end{figure}
 
-Damit die Screenreader die Helfer Texte auch interpretieren können, werden wieder ARIA-Attribute verwendet. So bekommt das Inputfeld selber das Attribut \codeinline{aria-describedby=\enquote{helper-id}}. Der Helfer Text dann die entsprechende \codeinline{id=\enquote{helper-id}}. Somit sind die Helfer Texte dem InputFeld zugewiesen als Beschreibung und werden vorgelesen, wenn man das Input Feld fokussiert. So schlägt es MUI auch in seiner Dokumentation vor als Best Practice \parencite[vgl.][]{mui_helper-text_nodate}.
+Damit die Screenreader die Helfer Texte auch interpretieren können, werden wieder ARIA-Attribute verwendet. Der Helfer Text bekommt die \codeinline{id=\enquote{helper-id}}. Das Inputfeld bekommt dann das Attribut \codeinline{aria-describedby=\enquote{helper-id}}. Somit sind die Helfer Texte dem Inputfeld zugewiesen als Beschreibung und werden vorgelesen, wenn man das Input Feld fokussiert. So schlägt es MUI auch in seiner Dokumentation vor als Best Practice \parencite[vgl.][]{mui_helper-text_nodate}.
 
 Zusätzlich wird das Input Feld auch wieder mit ARIA beschrieben. \codeinline{aria-invalid="true"} zeigt dem User, ob die Input Eingabe valide ist oder nicht. 
 
@@ -176,6 +176,14 @@ Wie schon in der Konzeption beschrieben, wurde auch ein FAQ-Bereich angelegt, um
 \section{Responsivität und Reflow}
 Die Anwendung passt sich unterschiedlichen Bildschirmgrößen an. Karten-Layouts etwa brechen von einer Drei-Spalten-Ansicht auf eine Ein-Spalten-Ansicht herunter (1.4.10 Reflow). Damit wird auch das Kriterium 1.3.4 Orientation erfüllt.
 
+\section{Barriere melden Funktion}
+Es ist nicht durch die Norm und die WCAG vorgegeben, aber man kann es trotzdem als gute Praxis ansehen, dass es eine Sektion gibt, in der man die Möglichkeit hat, Barrieren zu melden. Nur mit ausreichend Feedback und Hinweisen kann man seine Seite Stück für Stück der Barrierefreiheit näher bringen. Denn auch wenn es das Ziel dieser Arbeit ist, absolut barrierefreie Websites zu produzieren, ist man trotzdem auf das Feedback betroffener Personen angewiesen.
+
+\begin{figure}[H]
+    \includegraphics[width=\textwidth]{img/barriere-melden.png}
+    \caption{Sektion, in der man Barrieren melden kann}
+\end{figure}
+
 \section{Erkenntnisse bei der Entwicklung mit MUI}
 Wie schon erwähnt, wurde für die Entwicklung der barrierefreien Webanwendung die React-Komponentenbibliothek MUI (Material UI) verwendet. Die Entscheidung für MUI basierte unter anderem auch auf der Kombination aus vorgefertigten, wiederverwendbaren Komponenten und der guten Dokumentation, insbesondere im Hinblick auf Barrierefreiheit.
 
@@ -199,14 +207,6 @@ Wie schon erwähnt, wurde für die Entwicklung der barrierefreien Webanwendung d
 
     \item \textbf{Größe und Abhängigkeiten:} MUI ist ein umfangreiches Framework mit vielen Abhängigkeiten. Dies kann sich negativ auf Ladezeiten und Performance auswirken. Aspekte, die mittelbar auch die perceived accessibility (z.B. für Nutzer:innen mit kognitiven Einschränkungen) beeinflussen können.
 \end{enumerate}
-
-\section{Barriere melden Funktion}
-Es ist nicht durch die Norm und die WCAG vorgegeben, aber man kann es trotzdem als gute Praxis ansehen, dass es eine Sektion gibt, in der man die Möglichkeit hat, Barrieren zu melden. Nur mit ausreichend Feedback und Hinweisen kann man seine Seite Stück für Stück der Barrierefreiheit näher bringen. Denn auch wenn es das Ziel dieser Arbeit ist, absolut barrierefreie Websites zu produzieren, ist man trotzdem auf das Feedback betroffener Personen angewiesen.
-
-\begin{figure}[H]
-    \includegraphics[width=\textwidth]{img/barriere-melden.png}
-    \caption{Sektion, in der man Barrieren melden kann}
-\end{figure}
 
 \section{Hinweise zu nicht implementierten Bereichen}
 Da es keine Videoinhalte auf der Eventplattform gibt, konnten die dazu gehörigen Kriterien, wie zum Beispiel 2.2.2 Pause, Stop, Hide (z.B. für Multimedia-Inhalte) oder 1.2.2 Captions (Prerecorded) auch nicht umgesetzt werden. 
