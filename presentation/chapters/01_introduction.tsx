@@ -37,8 +37,7 @@ export function Introduction() {
         <Heading>Ziel</Heading>
         <Appear>
           <Text>
-            Brücke zwischen Entwickler:innen und dem <strong>BFSG</strong>{" "}
-            schlagen.
+            Brücke zwischen Entwicklern und dem <strong>BFSG</strong> schlagen.
           </Text>
         </Appear>
       </Slide>

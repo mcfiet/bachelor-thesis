@@ -19,7 +19,7 @@ export function Fazit() {
           </Appear>
           <Appear>
             <ListItem>
-              Nächster Schritt: Tests mit echten Nutzer:innen mit Behinderungen.
+              Nächster Schritt: Tests mit echten Nutzern mit Behinderungen.
             </ListItem>
           </Appear>
         </UnorderedList>
