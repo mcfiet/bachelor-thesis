@@ -3,8 +3,6 @@ services:
     image: ghcr.io/mcfiet/bachelor-thesis:${GIT_COMMIT_HASH:-latest}
     networks:
       - frontend
-    ports:
-      - "3040:3000"
 
 networks:
   frontend:
