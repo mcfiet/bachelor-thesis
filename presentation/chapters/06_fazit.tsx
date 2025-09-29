@@ -4,28 +4,6 @@ export function Fazit() {
   return (
     <>
       <Slide>
-        <Heading>9. Fazit</Heading>
-        <UnorderedList>
-          <Appear>
-            <ListItem>
-              Solide Wissensbasis zu BFSG, EAA 2019/882, WCAG&nbsp;2.1.
-            </ListItem>
-          </Appear>
-          <Appear>
-            <ListItem>
-              Häufige Fehler: Kontraste, Fokus, Name/Rolle/Wert.
-            </ListItem>
-          </Appear>
-          <Appear>
-            <ListItem>
-              Prototyp mit React (Next.js) &amp; MUI; externe Libs auf A11y
-              prüfen.
-            </ListItem>
-          </Appear>
-        </UnorderedList>
-      </Slide>
-
-      <Slide>
         <Heading>Kritik &amp; Ausblick</Heading>
         <UnorderedList>
           <Appear>

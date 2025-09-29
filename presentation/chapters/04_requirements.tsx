@@ -11,7 +11,7 @@ export function Requirements() {
           justifyContent="center"
           gap={16}
         >
-          <Heading>6. Anforderungen &amp; Konzept</Heading>
+          <Heading>Anforderungen &amp; Konzept</Heading>
         </FlexBox>
       </Slide>
 

@@ -4,7 +4,7 @@ export function Introduction() {
   return (
     <>
       <Slide>
-        <Heading>1. Einleitung &amp; Motivation</Heading>
+        <Heading>Einleitung &amp; Motivation</Heading>
         <Appear>
           <Text>
             In Deutschland leben <strong>9,4&nbsp;%</strong> der Bevölkerung mit

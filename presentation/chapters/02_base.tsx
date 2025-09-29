@@ -14,7 +14,7 @@ export function Base() {
         </Appear>
       </Slide>
       <Slide>
-        <Heading>3. Grundlagen – Barrierefreiheit</Heading>
+        <Heading>Grundlagen – Barrierefreiheit</Heading>
         <Appear>
           <Text>
             Ziel: Nutzung <em>ohne besondere Erschwernis</em> und{" "}
@@ -96,7 +96,7 @@ export function Base() {
         </Appear>
       </Slide>
       <Slide>
-        <Heading>4. Technologieauswahl</Heading>
+        <Heading>Technologieauswahl</Heading>
         <Appear>
           <Text>
             <strong>React:</strong> verbreitet, komponentenbasiert, große

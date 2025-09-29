@@ -14,7 +14,7 @@ export function Analysis() {
   return (
     <>
       <Slide>
-        <Heading>5. Analyse von Bestandsseiten</Heading>
+        <Heading>Analyse von Bestandsseiten</Heading>
         <div
           style={{
             display: "grid",

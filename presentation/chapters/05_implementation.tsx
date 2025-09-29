@@ -22,7 +22,7 @@ export function Implementation() {
           justifyContent="center"
           gap={16}
         >
-          <Heading>7. Implementierung</Heading>
+          <Heading>Implementierung</Heading>
           <Heading>Struktur &amp; Semantik</Heading>
         </FlexBox>
       </Slide>
