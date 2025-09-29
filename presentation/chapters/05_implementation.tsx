@@ -399,7 +399,7 @@ export default function InputField<T extends FieldValues>({
         </CodePane>
       </Slide>
       <Slide>
-        <Heading>Rendering (Umsetzung von MUI)</Heading>
+        <Heading>Rendering (Umsetzung von Mui)</Heading>
         <CodePane
           stepIndex={0}
           language="typescript"
@@ -410,17 +410,17 @@ export default function InputField<T extends FieldValues>({
         >
           {`
 <button
-  class="MuiButtonBase-root MuiAccordionSummary-root MuiAccordionSummary-gutters mui-1vq7cph-MuiButtonBase-root-MuiAccordionSummary-root"
+  class="MuiButtonBase-root MuiAccordionSummary-root [..]"
   tabindex="0"
   type="button"
   aria-expanded="true"
   id="eventa11yExplanation-header"
   aria-controls="eventa11yExplanation-content"
 >
-  <span class="MuiAccordionSummary-content MuiAccordionSummary-contentGutters mui-yfrx4k-MuiAccordionSummary-content">
+  <span class="MuiAccordionSummary-content [...]">
     Was ist Event A11y und was bietet die Website?
   </span>
-  <span class="MuiAccordionSummary-expandIconWrapper mui-1wqf3nl-MuiAccordionSummary-expandIconWrapper">
+  <span class="MuiAccordionSummary-expandIconWrapper [...]">
     <svg
       class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium mui-1umw9bq-MuiSvgIcon-root"
       focusable="false"
