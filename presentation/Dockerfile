@@ -1,16 +1,11 @@
-FROM node:20-alpine
+FROM node:20 as base
+COPY ./package.json ./package-lock.json ./
 
-WORKDIR /app
-
-# Nur package.json + lock zuerst kopieren, damit Layer gecached werden
-COPY package*.json ./
-
-RUN npm install
-
-# App Code kopieren
+RUN npm i
 COPY . .
+RUN npm run build
 
-ENV NODE_ENV=production
-EXPOSE 3000
 
-CMD ["npm", "start"]
+FROM nginx as build
+COPY --from=base ./dist /usr/share/nginx/html
+EXPOSE 80
