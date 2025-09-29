@@ -1,0 +1,9 @@
+services:
+  app:
+    image: ghcr.io/mcfiet/bachelor-thesis:${GIT_COMMIT_HASH:-latest}
+    networks:
+      - frontend
+
+networks:
+  frontend:
+    external: true

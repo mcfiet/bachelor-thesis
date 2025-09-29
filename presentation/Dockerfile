@@ -1,15 +1,15 @@
-# ---- Build stage ----
-FROM node:20-alpine AS builder
+FROM node:20-alpine
 
 WORKDIR /app
 
-# Pakete installieren (npm standard). Wenn du yarn/pnpm nutzt, siehe Hinweise unten.
+# Nur package.json + lock zuerst kopieren, damit Layer gecached werden
 COPY package*.json ./
-RUN npm ci
 
-# Quellcode rein und bauen
+RUN npm install
+
+# App Code kopieren
 COPY . .
-# Baue das Projekt (passt für Vite und CRA, beide nutzen `build`)
-RUN npm run build
 
-RUN npm run start
+EXPOSE 3000
+
+CMD ["npm", "start"]
